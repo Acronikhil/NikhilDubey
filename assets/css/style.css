@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+.nunito {
+	font-family: "Nunito", "Nunito" !important;
+}
+body {
+	background-color: #1c1c1c !important;
+	font-family: "eurostile", "Nunito";
+}
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px rgb(58, 58, 58);
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #585454;
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(150, 145, 145);
+}
+
+.euro {
+	font-family: "eurostile", "Nunito";
+}
+
+.tstyle {
+	font-family: "eurostile", "Nunito";
+}
+
+.back {
+	background-color: #7510f7;
+	flex: none;
+	width: 60%;
+}
+.bg {
+	background-color: #7510f7;
+	height: 30rem;
+}
+
+.ls {
+	letter-spacing: 1px;
+	font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "eurostile", "Nunito" !important;
+}
+
+.skills {
+	margin-top: -8rem;
+}
+.column1,
+.column2,
+.column {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 50px 30px;
+	height: 500px;
+	-webkit-box-flex: 1;
+
+	padding: 0.75rem;
+	z-index: 3;
+}
+
+.column1,
+.column2 {
+	border-right: 2px solid rgb(189, 158, 204);
+}
+
+.br {
+	margin: 50px 30px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	height: auto;
+}
+
+.typewriter h2 {
+	color: #fff;
+	font-family: monospace;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: 0.15em solid rgb(26, 2, 48); /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: 0.15em; /* Adjust as needed */
+	animation: typing 4.5s steps(30, end) infinite alternate,
+		blink-caret 0.7s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: rgb(33, 32, 34);
+	}
+}
+
+.fa-react {
+	font-size: 49px;
+	color: #7510f7;
+	animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.skills .card-group {
+	width: 70vw;
+}
+
+.purple {
+	color: #7510f7;
+}
+
+.card-body {
+	flex: 1;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-body > div {
+	height: max-content;
+}
+
+.border {
+	border: 1px solid #7510f7 !important;
+	border-radius: 20px;
+}
+
+.border:hover {
+	/* background-color: #752dd3; */
+	color: #fff;
+	border: 1px solid #fff !important;
+
+	box-shadow: 2px 2px 15px rgba(153, 153, 153, 0.979);
+	border-radius: 20px;
+}
+
+.border:hover > i {
+	color: #fff !important;
+}
+
+.footer {
+	background-color: #5d12c0;
+	padding: 3rem 1.5rem 2rem;
+}
+
+.footer > * {
+	font-family: "Nunito";
+}
+
+.handles {
+	font-size: 25px;
+}
+
+.handles:hover {
+	color: rgb(0, 0, 0) !important;
+	border: 1px solid rgba(48, 46, 46, 0);
+	box-shadow: 2px 0px 25px rgba(53, 50, 50, 0.979);
+	border-radius: 25px;
+	padding: 12px;
+	font-size: 30px;
+	transition-duration: 0.5s;
+	cursor: pointer;
+}
+
+.created {
+	background-color: rgba(44, 44, 44, 0.815);
+	box-shadow: 2px 0px 10px rgba(95, 94, 94, 0.979);
+}

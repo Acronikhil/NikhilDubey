@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    <link rel="shortcut icon" href="./assets/images/circle-cropped.png" type="image/x-icon">
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/w3.css">
 
@@ -26,10 +28,28 @@
     <title>Nikhil Dubey | Front-end Developer & Designer</title>
 </head>
 
-<body class="vw-100 vh-100 align-items-center justify-content-center">
+<body class="vw-100 vh-100 align-items-center justify-content-center" onload="LoaderFunction()">
+    <div id="loading">
+        <!-- <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div> -->
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+        <h1 class="w3-text-white load">Loading</h1>
+    </div>
     <nav class="navbar navbar-expand-lg w3-small navbar-dark ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo</a>
+            <img src="./assets/images/circle-cropped.png" class="img-responsive m-3 w3-circle" alt="MyPic" width="50vw">
+            <a class="navbar-brand" href="#">My Logo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,12 +60,12 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#me">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#projects">My Projects</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown link
@@ -55,7 +75,7 @@
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -71,7 +91,7 @@
         <div class="d-flex justify-content-center my-3 align-items-center pt-3">
             <img src="https://mattfarley.ca/img/mf-avatar.svg" alt="Image" width='150'>
         </div>
-        <div class="d-flex justify-content-center align-items-center pt-3">
+        <div class="d-flex justify-content-center align-items-center pt-3" id="me">
             <img src="https://mattfarley.ca/img/hero.svg" class="img-fluid" alt="Image" width='860'>
         </div>
 
@@ -79,9 +99,10 @@
 
     <section class="container-fluid  bg m-0 p-0">
         <div class=" d-flex justify-content-center   p-0 ">
-            <div class="back pt-5 typewriter">
-                <h2 class="text-center fw-bolde w3-text-white">Hi, I’m Nikhil Dubey. Nice to meet you.</h1>
-                    <p class="w3-text-white mt-5 euro ls fw-light lh-2 text-center text-wrap " style="height:20rem">
+            <div class="back pt-5">
+                <h2 class="text-center fw-bold text-wrap w3-text-white">Hi, I’m Nikhil Dubey. Nice to meet you.</h1>
+                    <p class="w3-text-white mt-5 euro ls fw-light lh-2 text-center text-wrap "
+                        style="margin-bottom:12rem">
                         I'M BTech. IT Student. I'm hardworking person also a good learner. I love to learn new Tech. and
                         make projects. Also I have done various internships, I worked as React Native Developer in
                         SagurIT
@@ -174,7 +195,7 @@
                                     <li>Android Studio</li>
                                     <li>Flutter</li>
                                     <li>X Code</li>
-                                    <li>VsCode</li>
+                                    <li id="projects">VsCode</li>
                                 </ul>
                         </div>
 
@@ -251,8 +272,9 @@
 
                             <p>HTML, CSS, JavaScript, Bootstrap</p>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                        <div class="card-footer w3-center">
+                            <a href="https://acronikhil.github.io/BangloreNGO/" class=" stretched-link"><button
+                                    class="btn btn-success">View</button></a>
                         </div>
                     </div>
                 </div>
@@ -330,7 +352,7 @@
     <footer class="footer px-0 ">
         <div class="content w3-center">
 
-            <marquee behaviour="" direction="left" style="width:20%">
+            <marquee behaviour="" direction="left" style="width:40%">
                 <p class="w3-xlarge logo">Find me on social media.</p>
             </marquee>
             <div class="">
@@ -347,7 +369,8 @@
                     <i class="fas fa-heart animate__animated animate__heartBeat animate__infinite"
                         style="color: red"></i></span>
                 By
-                <a class="text-decoration-none w3-text-white w3-hover-text-red  p-2" href="#" target="_blank">Nikhil
+                <a class="text-decoration-none w3-text-white w3-hover-text-red  p-2" href="#" target="_self"
+                    title>Nikhil
                     Dubey</a>
             </p>
         </div>

@@ -44,7 +44,7 @@ body {
 }
 .bg {
 	background-color: #7510f7;
-	height: 30rem;
+	height: fit-content;
 }
 
 .ls {

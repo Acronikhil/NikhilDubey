@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/w3.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
@@ -46,7 +48,8 @@
         </div>
         <h1 class="w3-text-white load">Loading</h1>
     </div>
-    <nav class="navbar navbar-expand-lg w3-small navbar-dark ">
+    <nav class="navbar navbar-expand-lg w3-small navbar-dark " data-aos="fade-right" data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
         <div class="container-fluid">
             <img src="./assets/images/circle-cropped.png" class="img-responsive m-3 w3-circle" alt="MyPic" width="50vw">
             <a class="navbar-brand" href="#">Nikhil Dubey</a>
@@ -81,7 +84,7 @@
         </div>
     </nav>
 
-    <div class="w3-container container-fluid pt-lg-5   ">
+    <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in-down">
         <h1 class="page-header display-5 w3-text-white pt-lg-5 text-center  fw-bolder tstyle">Front-end
             Developer, Designer</h1>
         <p class="w3-text-white pt-4 fw-light text-center">I design and code beautifully simple things, and I love
@@ -99,7 +102,7 @@
 
     <section class="container-fluid  bg m-0 p-0">
         <div class=" d-flex justify-content-center   p-0 ">
-            <div class="back pt-5">
+            <div class="back pt-5" data-aos="zoom-in-up">
                 <h2 class="text-center fw-bold text-wrap w3-text-white">Hi, I’m Nikhil Dubey. Nice to meet you.</h1>
                     <p class="w3-text-white mt-5 euro ls fw-light lh-2 text-center text-wrap "
                         style="margin-bottom:12rem">
@@ -139,7 +142,7 @@
         </div> -->
         <div class="d-flex  text-center justify-content-center align-items-center">
             <div class="card-group w3-card">
-                <div class="card w3-card ">
+                <div class="card w3-card " data-aos="fade-up-right">
                     <figure class="image mt-5">
                         <img src="https://mattfarley.ca/img/icons/frontend.svg" class="" alt="...">
                     </figure>
@@ -171,7 +174,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="fade-up-left">
                     <figure class="image mt-5">
 
                         <i class="fab fa-react "></i>
@@ -207,7 +210,7 @@
     </section>
 
     <section class="my-5">
-        <div>
+        <div data-aos="fade-right" data-aos-anchor-placement="top-center">
             <h2 class="text-center w3-text-white">My Recent Work</h2>
         </div>
         <p class="text-center fw-light w3-text-white ">Here are a few projects I've worked on recently. Want to see
@@ -219,9 +222,8 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                    <div class="card h-100 ">
-                        <img src="https://source.unsplash.com/1600x900/?music,music?festival,player"
-                            class="card-img-top" alt="...">
+                    <div class="card h-100 " data-aos="fade-left" data-aos-anchor-placement="top-center">
+                        <img src="https://source.unsplash.com/1600x900/?dj" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">FEEM Player</h5>
                             <p class="card-text">FEEM Player is a music player wich plays music according to your mood
@@ -232,14 +234,14 @@
 
                             <p>Angular, HTML, CSS, JavaScript, ML, Typescript, mysql, Nodejs.</p>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                        <div class="card-footer w3-center">
+                            <a href="#" class=" stretched-link"><button class="btn btn-success">View</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="https://source.unsplash.com/1600x900/?police,hacker" class="card-img-top" alt="...">
+                    <div class="card h-100" data-aos="fade-down" data-aos-anchor-placement="top-center">
+                        <img src="https://source.unsplash.com/1600x900/?party" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">Criminal Detector</h5>
                             <p class="card-text">Criminal Detector is a web App which can be used by only registered
@@ -252,14 +254,14 @@
 
                             <p>Django, HTML, CSS, PythonScript, AI, ML, PostgreSQL.</p>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                        <div class="card-footer w3-center">
+                            <a href="#" class=" stretched-link"><button class="btn btn-success">View</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="https://source.unsplash.com/1600x900/?dogs,nature
+                    <div class="card h-100" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                        <img src="https://source.unsplash.com/1600x900/?dogs
                         " class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">Carlsecra Foundation</h5>
@@ -279,8 +281,8 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="https://source.unsplash.com/1600x900/?shop,mart" class="card-img-top" alt="...">
+                    <div class="card h-100" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                        <img src="https://source.unsplash.com/1600x900/?party" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">Shopzee</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
@@ -292,14 +294,14 @@
 
                             <p>Angular, HTML, CSS, JavaScript, Bootstrap.</p>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                        <div class="card-footer w3-center">
+                            <a href="#" class=" stretched-link"><button class="btn btn-success">View</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="https://source.unsplash.com/1600x900/?shop,mart" class="card-img-top" alt="...">
+                    <div class="card h-100" data-aos="zoom-in" data-aos-anchor-placement="top-bottom">
+                        <img src="https://source.unsplash.com/1600x900/?dj" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">StuPro</h5>
                             <p class="card-text">Stupro is webapp mainly made for students. StuPro helps students by
@@ -312,14 +314,14 @@
 
                             <p>Angular, HTML, CSS, JavaScript, ML, Typescript.</p>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                        <div class="card-footer w3-center">
+                            <a href="#" class=" stretched-link"><button class="btn btn-success">View</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100">
-                        <img src="https://source.unsplash.com/1600x900/?shop,mart" class="card-img-top" alt="...">
+                    <div class="card h-100" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
+                        <img src="https://source.unsplash.com/1600x900/?covid" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">CoviGo</h5>
                             <p class="card-text">CoviGo is app which shows all the information about Total active cases,
@@ -331,8 +333,8 @@
 
                             <p>React Native, JavaScript, Advanced JavaScript(EchmaScript-6)</p>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                        <div class="card-footer w3-center">
+                            <a href="#" class=" stretched-link"><button class="btn btn-success">View</button></a>
                         </div>
                     </div>
                 </div>
@@ -383,6 +385,13 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="./assets/js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            { duration: 1000, offset: 300 }
+        );
+    </script>
+
 
 </body>
 

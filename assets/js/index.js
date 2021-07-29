@@ -1,4 +1,5 @@
 // Loader Function
+
 var preloader = document.getElementById("loading");
 var hide = document.getElementsByClassName("hide");
 

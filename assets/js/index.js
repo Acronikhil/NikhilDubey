@@ -29,3 +29,12 @@ $(document).ready(function () {
 		time: 1200,
 	});
 });
+
+let play = () => {
+	let music = document.getElementById("music");
+	music.play();
+};
+let pause = () => {
+	let music = document.getElementById("music");
+	music.pause();
+};

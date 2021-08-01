@@ -20,3 +20,12 @@ let change = () => {
 	let a = document.getElementsByClassName("ME");
 	a.style.color = "white";
 };
+
+// counter function
+
+$(document).ready(function () {
+	$(".counter").counterUp({
+		delay: 10,
+		time: 1200,
+	});
+});

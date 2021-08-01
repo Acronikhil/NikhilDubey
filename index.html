@@ -31,23 +31,14 @@
 </head>
 
 <body class="vw-100 vh-100 align-items-center justify-content-center" onload="LoaderFunction()">
-    <div id="loading">
-        <!-- <div class="lds-roller">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div> -->
+    <!-- <div id="loading">
+        
         <div class="lds-ripple">
             <div></div>
             <div></div>
         </div>
         <h1 class="w3-text-white load">Loading</h1>
-    </div>
+    </div> -->
     <nav class="navbar navbar-expand-lg w3-small navbar-dark " data-aos="fade-right" data-aos-offset="300"
         data-aos-easing="ease-in-sine">
         <div class="container-fluid">
@@ -84,7 +75,7 @@
         </div>
     </nav>
 
-    <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in-down">
+    <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in">
         <h1 class="page-header display-5 w3-text-white pt-lg-5 text-center  fw-bolder tstyle">Front-end
             Developer, Designer</h1>
         <p class="w3-text-white pt-4 fw-light text-center">I design and code beautifully simple things, and I love
@@ -185,7 +176,7 @@
                         </div>
                         <div>
                             <p class="card-text">I'm Basically a Front-end Developer. I Like to make Native Applications
-                                that's I use to make my most of the App using React Native. </p>
+                                that's why I use to make my most of the App using React Native. </p>
                         </div>
                         <div>
                             <h4 class="card-title purple">Languages I worked with</h4>
@@ -211,7 +202,7 @@
 
     <section class="my-5">
         <div data-aos="fade-right" data-aos-anchor-placement="top-center">
-            <h2 class="text-center w3-text-white">My Recent Work</h2>
+            <h1 class="text-center w3-text-white">My Recent Work</h1>
         </div>
         <p class="text-center fw-light w3-text-white ">Here are a few projects I've worked on recently. Want to see
             more?<span class="purple">
@@ -349,6 +340,77 @@
 
     </section>
 
+    <section class="container" id="moreSkills" data-aos="fade-up">
+        <h1 class="w3-padding-16 w3-text-light-grey text-center">My IT Skills</h3>
+            <p class="w3-wide w3-text-white my-2 w3-large" title="HTML, CSS, JS, Bootstrap, TailwindCSS">Web Design
+                <span class="w3-tiny"> &nbsp;(Hover To See More)</span>
+            </p>
+            <div class="" style="background-color: var(--gcolor2);">
+                <div class="" style="height:28px;width:95%; background-color: var(--pcolor);"></div>
+            </div>
+            <p class="w3-wide w3-text-white my-2 w3-large" title="Django, Flask, JSX, ReactJS">Web Framework <span
+                    class="w3-tiny"> &nbsp;(Hover To See More)</span></p>
+            <div class="w3-white " style=" background-color: var(--gcolor2);">
+                <div class=" " style="height:28px;width:85%; background-color: var(--pcolor);"></div>
+            </div>
+            <p class="w3-wide w3-text-white my-2 w3-large" title="React Native, Android, Flutter">APP Development <span
+                    class="w3-tiny"> &nbsp;(Hover To See More)</span></p>
+            <div class="w3-white">
+                <div class="" style="height:28px;width:60%; background-color: var(--pcolor);"></div>
+            </div><br>
+
+
+            <div class="counter-up">
+                <div class="content">
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-history purple"></i></div>
+                        <div class="counter tstyle">724</div>
+                        <div class="text">Working Hours</div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-gift purple"></i></div>
+                        <div class="counter tstyle">12</div>
+                        <div class="text">Completed Projects</div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fas fa-users purple"></i></div>
+                        <div class="counter tstyle">3</div>
+                        <div class="text">Internhips</div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="w3-xxxlarge material-icons purple">sensors</i></div>
+                        <div class="counter tstyle ">6</div>
+                        <div class="text">Live Apps / Websites </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">11+</span><br>
+                Partners
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">55+</span><br>
+                Projects Done
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">89+</span><br>
+                Happy Clients
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">150+</span><br>
+                Meetings
+            </div>
+        </div> -->
+
+            <a href="./assets/Nikhil_Dubey_resume.pdf" style="cursor: pointer !important;"
+                download="NikhilDubey_resume"><button class="btn download w3-padding-large border w3-section">
+                    <i class="fa fa-download"></i> Download Resume
+                </button></a>
+
+    </section>
+
     <div class="hr"></div>
 
     <footer class="footer px-0 ">
@@ -390,6 +452,17 @@
         AOS.init(
             { duration: 1000, offset: 300 }
         );
+    </script>
+
+    <script>
+        // counter function
+
+        $(document).ready(function () {
+            $(".counter").counterUp({
+                delay: 10,
+                time: 1200,
+            });
+        });
     </script>
 
 

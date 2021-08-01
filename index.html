@@ -84,6 +84,15 @@
     </nav>
 
     <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in">
+        <div class="m-0 p-0 w3-display-left">
+            <div class="my-1"> <a href="#music" class="btn " title="Saviour Music"><i
+                        class="fas fa-music w3-text-white w3-xlarge"></i></a>
+            </div>
+            <div class="my-1" onclick="play()"> <a class="btn " title="Play Music"><i
+                        class="far fa-play-circle w3-text-white w3-xlarge"></i></a></div>
+            <div class="my-1" onclick="pause()"> <a class="btn " title="Pause Music"><i
+                        class="far fa-pause-circle w3-text-white w3-xlarge"></i></a></div>
+        </div>
         <h1 class="page-header display-5 w3-text-white pt-lg-5 text-center  fw-bolder tstyle">Front-end
             Developer, Designer</h1>
         <p class="w3-text-white pt-4 fw-light text-center">I design and code beautifully simple things, and I love
@@ -452,18 +461,7 @@
                     title>Nikhil
                     Dubey</a>
             </p>
-            <nav data-aos="zoom-in-up" id=" social " class=" social wow nav sticky-top pulse w3-display-right">
-                <ul>
-                    <li class=" btn"><a href="#music" class="w3-large wr-text-red w3-block"><i
-                                class="fas fa-music "></i>Saviour
-                        </a></li>
-                    <li class="btn" onclick="play();"><a class="w3-large wr-text-red"><i
-                                class="far fa-play-circle"></i>Play </a></li>
-                    <li class="btn" onclick="pause();"><a class="w3-large wr-text-red"><i
-                                class="far fa-pause-circle"></i>Pause </a></li>
 
-                </ul>
-            </nav>
             <audio src="./assets/henri.mp3" autoplay controls id="music"></audio>
         </div>
     </footer>

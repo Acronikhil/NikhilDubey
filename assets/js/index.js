@@ -30,6 +30,7 @@ $(document).ready(function () {
 	});
 });
 
+// Play Music
 let play = () => {
 	let music = document.getElementById("music");
 	music.play();

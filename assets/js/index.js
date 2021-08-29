@@ -48,13 +48,18 @@ const play = document.getElementById("play");
 // const pbtn = documement.getElementById("pbtn");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
+const music_title = document.getElementById("music_title");
+const music_state = document.getElementById("music_state");
+const music_name = document.getElementById("music_name");
 
 const songs = [
 	{
 		name: "Saviour",
+		title: "Saviour",
 	},
 	{
 		name: "Fly_Me",
+		title: "Fly Me To The Moon",
 	},
 ];
 songIndex = 0;
@@ -64,8 +69,10 @@ let isPlaying = false;
 const playMusic = () => {
 	console.log("Play To Chalra hai");
 	music.play();
+
 	isPlaying = true;
 	play.classList.replace("fa-play-circle", "fa-pause-circle");
+	music_state.textContent = "Playing ";
 };
 // To Pause
 const pauseMusic = () => {
@@ -73,6 +80,7 @@ const pauseMusic = () => {
 
 	isPlaying = false;
 	play.classList.replace("fa-pause-circle", "fa-play-circle");
+	music_state.textContent = "Paused ";
 };
 
 play.addEventListener("click", () => {
@@ -83,6 +91,8 @@ play.addEventListener("click", () => {
 
 const loadSong = (songs) => {
 	music.src = "./assets/" + songs.name + ".mp3";
+	music_title.title = songs.title;
+	music_name.innerHTML = `${songs.title}`;
 };
 
 const nextSong = () => {
@@ -100,3 +110,18 @@ const prevSong = () => {
 // loadSong(songs[1]);
 next.addEventListener("click", nextSong);
 prev.addEventListener("click", prevSong);
+
+// alert code
+
+const alert_gen = document.getElementById("trigger");
+
+alert_gen.addEventListener("click", () => {
+	document.querySelector(".alert").classList.add("show");
+	document.querySelector(".alert").classList.remove("hide");
+	document.querySelector(".alert").classList.add("showAlert");
+	setTimeout(function () {
+		document.querySelector(".alert").classList.remove("show");
+		document.querySelector(".alert").classList.add("hide");
+	}, 3000);
+	console.log("im called");
+});

@@ -91,8 +91,15 @@
     </nav>
 
     <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in">
-        <div class="m-0 p-0 w3-display-left">
-            <div class="my-1"> <a href="#music" class="btn " title="Saviour Music"><i
+        <div class="alert hide">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg"><span id='music_state'></span><span id='music_name'>Saviour</span></span>
+            <div class="close-btn">
+                <span class="fas fa-times"></span>
+            </div>
+        </div>
+        <div class="m-0 p-0 w3-display-left" id="trigger">
+            <div class="my-1"> <a href="#music" class="btn " id="music_title" title="Saviour"><i
                         class="fas fa-music w3-text-white w3-xlarge"></i></a>
             </div>
             <div class="my-1"> <a class="btn" title="Play Music"><i class="far fa-play-circle w3-text-white w3-xlarge"
@@ -496,6 +503,7 @@
             new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
         }
     </script>
+
 
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

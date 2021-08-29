@@ -27,21 +27,20 @@
     <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
     <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <title>Nikhil Dubey | Front-end Developer & Designer</title>
+
+
+
+
 </head>
 
 <body class="vw-100 vh-100 align-items-center justify-content-center" onload="LoaderFunction()">
     <div id="loading">
-        <!-- <div class="lds-roller">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div> -->
+
         <div class="lds-ripple">
             <div></div>
             <div></div>
@@ -50,7 +49,7 @@
     </div>
     <nav class="navbar navbar-expand-lg w3-small navbar-dark " data-aos="fade-right" data-aos-offset="300"
         data-aos-easing="ease-in-sine">
-        <div class="container-fluid">
+        <div class="container-fluid w3-container">
             <img src="./assets/images/circle-cropped.png" class="img-responsive m-3 w3-circle" alt="MyPic" width="50vw">
             <a class="navbar-brand" href="#">Nikhil Dubey</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -58,7 +57,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav w3-center">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -68,6 +67,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">My Projects</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#moreSkills">My IT Skills</a>
+                    </li>
+
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -80,11 +83,23 @@
                         </ul>
                     </li> -->
                 </ul>
+                <div class="w3-display-right mx-2 w3-center">
+                    <div id="google_translate_element"></div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in-down">
+    <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in">
+        <div class="m-0 p-0 w3-display-left">
+            <div class="my-1"> <a href="#music" class="btn " title="Saviour Music"><i
+                        class="fas fa-music w3-text-white w3-xlarge"></i></a>
+            </div>
+            <div class="my-1" onclick="play()"> <a class="btn " title="Play Music"><i
+                        class="far fa-play-circle w3-text-white w3-xlarge"></i></a></div>
+            <div class="my-1" onclick="pause()"> <a class="btn " title="Pause Music"><i
+                        class="far fa-pause-circle w3-text-white w3-xlarge"></i></a></div>
+        </div>
         <h1 class="page-header display-5 w3-text-white pt-lg-5 text-center  fw-bolder tstyle">Front-end
             Developer, Designer</h1>
         <p class="w3-text-white pt-4 fw-light text-center">I design and code beautifully simple things, and I love
@@ -142,7 +157,7 @@
         </div> -->
         <div class="d-flex  text-center justify-content-center align-items-center">
             <div class="card-group w3-card">
-                <div class="card w3-card " data-aos="fade-up-right">
+                <div class="card w3-card " data-aos="fade-up">
                     <figure class="image mt-5">
                         <img src="https://mattfarley.ca/img/icons/frontend.svg" class="" alt="...">
                     </figure>
@@ -174,7 +189,7 @@
                     </div>
                 </div>
 
-                <div class="card" data-aos="fade-up-left">
+                <div class="card" data-aos="fade-down">
                     <figure class="image mt-5">
 
                         <i class="fab fa-react "></i>
@@ -185,7 +200,7 @@
                         </div>
                         <div>
                             <p class="card-text">I'm Basically a Front-end Developer. I Like to make Native Applications
-                                that's I use to make my most of the App using React Native. </p>
+                                that's why I use to make my most of the App using React Native. </p>
                         </div>
                         <div>
                             <h4 class="card-title purple">Languages I worked with</h4>
@@ -211,7 +226,7 @@
 
     <section class="my-5">
         <div data-aos="fade-right" data-aos-anchor-placement="top-center">
-            <h2 class="text-center w3-text-white">My Recent Work</h2>
+            <h1 class="text-center w3-text-white">My Recent Work</h1>
         </div>
         <p class="text-center fw-light w3-text-white ">Here are a few projects I've worked on recently. Want to see
             more?<span class="purple">
@@ -222,7 +237,7 @@
         <div class="container">
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                    <div class="card h-100 " data-aos="fade-left" data-aos-anchor-placement="top-center">
+                    <div class="card h-100 " data-aos="fade-right" data-aos-anchor-placement="top-center">
                         <img src="https://source.unsplash.com/1600x900/?dj" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">FEEM Player</h5>
@@ -260,7 +275,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                    <div class="card h-100" data-aos="zoom-in" data-aos-anchor-placement="top-center">
                         <img src="https://source.unsplash.com/1600x900/?dogs
                         " class="card-img-top" alt="...">
                         <div class="card-body">
@@ -300,7 +315,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100" data-aos="zoom-in" data-aos-anchor-placement="top-bottom">
+                    <div class="card h-100" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                         <img src="https://source.unsplash.com/1600x900/?dj" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">StuPro</h5>
@@ -320,7 +335,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100" data-aos="fade-left" data-aos-anchor-placement="top-bottom">
+                    <div class="card h-100" data-aos="zoom-in" data-aos-anchor-placement="top-bottom">
                         <img src="https://source.unsplash.com/1600x900/?covid" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">CoviGo</h5>
@@ -349,25 +364,103 @@
 
     </section>
 
+    <section class="container" id="moreSkills" data-aos="fade-up">
+        <h1 class="w3-padding-16 w3-text-light-grey text-center">My IT Skills</h1>
+        <p class="w3-wide w3-text-white my-2 w3-large" title="HTML, CSS, JS, Bootstrap, TailwindCSS">Web Design
+            <span class="w3-tiny"> &nbsp;(Hover To See More)</span>
+        </p>
+        <div class="" style="background-color: var(--gcolor2);">
+            <div class="" style="height:28px;width:95%; background-color: var(--pcolor);"></div>
+        </div>
+        <p class="w3-wide w3-text-white my-2 w3-large" title="Django, Flask, JSX, ReactJS">Web Framework <span
+                class="w3-tiny"> &nbsp;(Hover To See More)</span></p>
+        <div class="w3-white " style=" background-color: var(--gcolor2);">
+            <div class=" " style="height:28px;width:85%; background-color: var(--pcolor);"></div>
+        </div>
+        <p class="w3-wide w3-text-white my-2 w3-large" title="React Native, Android, Flutter">APP Development <span
+                class="w3-tiny"> &nbsp;(Hover To See More)</span></p>
+        <div class="w3-white">
+            <div class="" style="height:28px;width:60%; background-color: var(--pcolor);"></div>
+        </div><br>
+
+
+        <div class="counter-up">
+            <div class="content">
+                <div class="box">
+                    <div class="icon"><i class="fas fa-history purple"></i></div>
+                    <div class="counter tstyle">724</div>
+                    <div class="text">Working Hours</div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fas fa-gift purple"></i></div>
+                    <div class="counter tstyle">12</div>
+                    <div class="text">Completed Projects</div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fas fa-users purple"></i></div>
+                    <div class="counter tstyle">3</div>
+                    <div class="text">Internhips</div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="w3-xxxlarge material-icons purple">sensors</i></div>
+                    <div class="counter tstyle ">6</div>
+                    <div class="text">Live Apps / Websites </div>
+                </div>
+                <marquee class="mt-5" behaviour="scroll" direction="left" scrollamount="12">
+                    <p class="w3-xlarge logo w3-text-light-grey ">To See Exact Number Please Reload Page</p>
+                </marquee>
+            </div>
+
+        </div>
+
+        <!-- <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">11+</span><br>
+                Partners
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">55+</span><br>
+                Projects Done
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">89+</span><br>
+                Happy Clients
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">150+</span><br>
+                Meetings
+            </div>
+        </div> -->
+
+        <a href="./assets/Nikhil_Dubey_resume.pdf" style="cursor: pointer !important;"
+            download="NikhilDubey_resume"><button class="btn download w3-padding-large border w3-section">
+                <i class="fa fa-download"></i> Download Resume
+            </button></a>
+
+    </section>
+
     <div class="hr"></div>
 
     <footer class="footer px-0 ">
         <div class="content w3-center">
 
-            <marquee behaviour="" direction="left" style="width:40%">
-                <p class="w3-xlarge logo">Find me on social media.</p>
-            </marquee>
+
+            <p class="w3-xlarge logo text-center w3-text-light-grey w3-hover-text-black">Find me on social media.</p>
+
             <div class="">
-                <i class=" handles w3-text-white  mx-1 fab fa-facebook-f "></i>
-                <i class=" handles w3-text-white mx-1 fab fa-instagram w3-hover-text-black"></i>
-                <i class=" handles w3-text-white mx-1 fab fa-snapchat w3-hover-text-black"></i>
-                <i class=" handles w3-text-white mx-1 fab fa-pinterest-p w3-hover-text-black"></i>
-                <i class=" handles w3-text-white mx-1 fab fa-twitter w3-hover-text-black"></i>
-                <i class=" handles w3-text-white mx-1 fab fa-linkedin w3-hover-text-black"></i>
+                <a href="https://www.facebook.com/nikhil.dubey.505523/"> <i
+                        class=" handles w3-text-white  p-2  fab fa-facebook-f "></i></a>
+                <a href="https://www.instagram.com/20.dubey.nikhil/"></a><i
+                    class=" handles w3-text-white p-2 fab fa-instagram w3-hover-text-black"></i>
+                <a href=""></a><i class=" handles w3-text-white p-2 fab fa-snapchat w3-hover-text-black"></i>
+                <a href=""></a><i class=" handles w3-text-white p-2 fab fa-pinterest-p w3-hover-text-black"></i>
+                <a href="https://twitter.com/NikhilD89993130"></a><i
+                    class=" handles w3-text-white p-2 fab fa-twitter w3-hover-text-black"></i>
+                <a href=""></a><i class=" handles w3-text-white p-2 fab fa-linkedin w3-hover-text-black"></i>
             </div>
 
             <p class="w3-large w3-text-white mt-5 mb-3 py-3 created">
-                Created With<span class="animate__animated animate__heartBeat mx-1">
+                Created With<span class="animate__animated animate__heartBeat p-2">
                     <i class="fas fa-heart animate__animated animate__heartBeat animate__infinite"
                         style="color: red"></i></span>
                 By
@@ -375,6 +468,11 @@
                     title>Nikhil
                     Dubey</a>
             </p>
+
+            <audio  autoplay loop controls id="music">
+			<source src="./assets/henri.mp3" type="audio" loop="True">
+			<source src="./assets/Fly_Me.mp4" type="audio" loop="True">
+			</audio>
         </div>
     </footer>
 
@@ -391,6 +489,26 @@
             { duration: 1000, offset: 300 }
         );
     </script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- <script>
+        // counter function
+
+        $(document).ready(function () {
+            $(".counter").counterUp({
+                delay: 10,
+                time: 1200,
+            });
+        });
+    </script> -->
 
 
 </body>

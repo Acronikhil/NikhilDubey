@@ -125,3 +125,31 @@ alert_gen.addEventListener("click", () => {
 	}, 3000);
 	console.log("im called");
 });
+
+const feemplay = document.getElementById("feemplay");
+const btnText = document.getElementById("btnText");
+let videoState = "paused";
+const videoPlay = (name, btnId) => {
+	name.play();
+	name.requestFullscreen();
+	videoState = "playing";
+	console.log("vidoState after play btn call:", videoState);
+	btnId.textContent = "Pause";
+};
+const videoPause = (name, btnId) => {
+	name.pause();
+	videoState = "paused";
+	console.log("vidoState after pause btn call:", videoState);
+	btnId.textContent = "Play";
+};
+
+// feemplay.addEventListener("click", () => {
+// 	let play = document.getElementById("feemplayer");
+// 	// play.play();
+// 	// play.requestFullScreen();
+// 	videoState == "paused" ? videoPlay(play) : videoPause(play);
+// });
+
+const videoPlayer = (id, btnId) => {
+	videoState == "paused" ? videoPlay(id, btnId) : videoPause(id, btnId);
+};

@@ -83,22 +83,31 @@
                         </ul>
                     </li> -->
                 </ul>
-                <div class="w3-display-right mx-2 w3-center">
+                <!-- <div class="w3-display-right mx-2 w3-center">
                     <div id="google_translate_element"></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </nav>
 
     <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in">
-        <div class="m-0 p-0 w3-display-left">
-            <div class="my-1"> <a href="#music" class="btn " title="Saviour Music"><i
+        <div class="alert hide">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg"><span id='music_state'></span><span id='music_name'>Saviour</span></span>
+            <div class="close-btn">
+                <span class="fas fa-times"></span>
+            </div>
+        </div>
+        <div class="m-0 p-0 w3-display-left" id="trigger">
+            <div class="my-1"> <a href="#music" class="btn " id="music_title" title="Saviour"><i
                         class="fas fa-music w3-text-white w3-xlarge"></i></a>
             </div>
-            <div class="my-1" onclick="play()"> <a class="btn " title="Play Music"><i
-                        class="far fa-play-circle w3-text-white w3-xlarge"></i></a></div>
-            <div class="my-1" onclick="pause()"> <a class="btn " title="Pause Music"><i
-                        class="far fa-pause-circle w3-text-white w3-xlarge"></i></a></div>
+            <div class="my-1"> <a class="btn" title="Play Music"><i class="far fa-play-circle w3-text-white w3-xlarge"
+                        id="play"></i></a></div>
+            <div class="my-1"> <a class="btn " title="Previous Music"><i
+                        class="fas fa-chevron-circle-left w3-text-white w3-xlarge" id="prev"></i></a></div>
+            <div class="my-1"> <a class="btn " title="Next Music"><i
+                        class="fas fa-chevron-circle-right w3-text-white w3-xlarge" id="next"></i></a></div>
         </div>
         <h1 class="page-header display-5 w3-text-white pt-lg-5 text-center  fw-bolder tstyle">Front-end
             Developer, Designer</h1>
@@ -238,7 +247,21 @@
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card h-100 " data-aos="fade-right" data-aos-anchor-placement="top-center">
-                        <img src="https://source.unsplash.com/1600x900/?dj" class="card-img-top" alt="...">
+                        <!-- <img src="https://source.unsplash.com/1600x900/?dj" class="card-img-top" alt="..."> -->
+
+                        <div>
+                            <!-- <iframe src=" https://drive.google.com/file/d/1FCYddyZxHMYmsi8B2tKctl7CEcFvrS8V/preview"
+                                allow="autoplay" allowfullscreen></iframe> -->
+                            <video id="feemplayer" class="card-img-top"
+                                poster="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                                id="myVideo" allowfullscreen>
+                                <source src="./assets/videos/MyPlayerFeem.mp4" type="video/mp4">
+
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+
+                        <!-- width="640" height="480" -->
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">FEEM Player</h5>
                             <p class="card-text">FEEM Player is a music player wich plays music according to your mood
@@ -250,13 +273,26 @@
                             <p>Angular, HTML, CSS, JavaScript, ML, Typescript, mysql, Nodejs.</p>
                         </div>
                         <div class="card-footer w3-center">
-                            <a href="#" class=" stretched-link"><button class="btn btn-success">View</button></a>
+                            <a href="#feemplayer" id="feemplay" onclick="videoPlayer(feemplayer,fBtnText)"
+                                class="stretched-link"><button class="btn btn-success"><span id="fBtnText">Play</span>
+                                    Video</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100" data-aos="fade-down" data-aos-anchor-placement="top-center">
-                        <img src="https://source.unsplash.com/1600x900/?party" class="card-img-top" alt="...">
+                        <!-- <img src="https://source.unsplash.com/1600x900/?party" class="card-img-top" alt="..."> -->
+                        <div>
+                            <!-- <iframe src=" https://drive.google.com/file/d/1FCYddyZxHMYmsi8B2tKctl7CEcFvrS8V/preview"
+                                allow="autoplay" allowfullscreen></iframe> -->
+                            <video id="criminalPlayer" class="card-img-top"
+                                poster="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                                id="myVideo" allowfullscreen>
+                                <source src="./assets/videos/criminalDetector.mp4" type="video/mp4">
+
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">Criminal Detector</h5>
                             <p class="card-text">Criminal Detector is a web App which can be used by only registered
@@ -270,13 +306,15 @@
                             <p>Django, HTML, CSS, PythonScript, AI, ML, PostgreSQL.</p>
                         </div>
                         <div class="card-footer w3-center">
-                            <a href="#" class=" stretched-link"><button class="btn btn-success">View</button></a>
+                            <a href="#criminalPlayer" onclick="videoPlayer(criminalPlayer,cBtnText)"
+                                class=" stretched-link"><button class="btn btn-success"><span id="cBtnText">Play</span>
+                                    Video</button></a>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card h-100" data-aos="zoom-in" data-aos-anchor-placement="top-center">
-                        <img src="https://source.unsplash.com/1600x900/?dogs
+                        <img src="https://images.unsplash.com/photo-1601758124096-1fd661873b95?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
                         " class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">Carlsecra Foundation</h5>
@@ -291,7 +329,7 @@
                         </div>
                         <div class="card-footer w3-center">
                             <a href="https://acronikhil.github.io/BangloreNGO/" class=" stretched-link"><button
-                                    class="btn btn-success">View</button></a>
+                                    class="btn btn-success">Visit WebPage</button></a>
                         </div>
                     </div>
                 </div>
@@ -436,6 +474,10 @@
             download="NikhilDubey_resume"><button class="btn download w3-padding-large border w3-section">
                 <i class="fa fa-download"></i> Download Resume
             </button></a>
+        <a href="./assets/Nikhil_Dubey_resume.pdf" style="cursor: pointer !important;"
+            download="NikhilDubey_resume"><button class="btn download w3-padding-large border w3-section">
+                <i class="fa fa-download"></i> Download Resume 2
+            </button></a>
 
     </section>
 
@@ -469,10 +511,9 @@
                     Dubey</a>
             </p>
 
-            <audio  autoplay loop controls id="music">
-			<source src="./assets/henri.mp3" type="audio" loop="True">
-			<source src="./assets/Fly_Me.mp4" type="audio" loop="True">
-			</audio>
+            <audio src="./assets/Saviour.mp3" loop controls id="music">
+
+            </audio>
         </div>
     </footer>
 
@@ -495,6 +536,7 @@
             new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
         }
     </script>
+
 
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

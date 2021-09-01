@@ -135,12 +135,14 @@ const videoPlay = (name, btnId) => {
 	videoState = "playing";
 	console.log("vidoState after play btn call:", videoState);
 	btnId.textContent = "Pause";
+	pauseMusic();
 };
 const videoPause = (name, btnId) => {
 	name.pause();
 	videoState = "paused";
 	console.log("vidoState after pause btn call:", videoState);
 	btnId.textContent = "Play";
+	// isPlaying ? pauseMusic() : playMusic();
 };
 
 // feemplay.addEventListener("click", () => {

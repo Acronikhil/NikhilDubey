@@ -130,6 +130,7 @@ const feemplay = document.getElementById("feemplay");
 const btnText = document.getElementById("btnText");
 let videoState = "paused";
 const videoPlay = (name, btnId) => {
+	name.load();
 	name.play();
 	name.requestFullscreen();
 	videoState = "playing";
@@ -155,3 +156,24 @@ const videoPause = (name, btnId) => {
 const videoPlayer = (id, btnId) => {
 	videoState == "paused" ? videoPlay(id, btnId) : videoPause(id, btnId);
 };
+
+const toggle_btn = document.getElementById("toggle_btn_acc");
+const cerificateGallery = document.getElementById("certificate_Gallery");
+let Accordian = "collapsed";
+
+const openAcc = () => {
+	cerificateGallery.textContent = "Close ";
+	Accordian = "opened";
+	console.log("OpenAcc called");
+};
+
+const closeAcc = () => {
+	cerificateGallery.textContent = "Open ";
+	Accordian = "collapsed";
+	console.log("closeAcc called");
+};
+
+toggle_btn.addEventListener("click", () => {
+	console.log("Mia to call hua");
+	Accordian == "collapsed" ? openAcc() : closeAcc();
+});

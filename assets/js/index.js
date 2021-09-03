@@ -157,7 +157,7 @@ const videoPlayer = (id, btnId) => {
 	videoState == "paused" ? videoPlay(id, btnId) : videoPause(id, btnId);
 };
 
-const toggle_btn = document.getElementById("toggle_btn_acc");
+const toggle_btn = document.getElementById("gallery");
 const cerificateGallery = document.getElementById("certificate_Gallery");
 let Accordian = "collapsed";
 

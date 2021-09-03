@@ -74,6 +74,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#moreSkills">My IT Skills</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">My Certificates Gallery</a>
+                    </li>
 
                     <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -292,7 +295,7 @@
                             <video id="criminalPlayer" class="card-img-top"
                                 poster="https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
                                 id="myVideo" allowfullscreen>
-                                <source src="./assets/videos/criminalDetector.mp4" type="video/mp4">
+                                <source src="/assets/videos/criminalDetector.mp4" type="video/mp4">
 
                                 Your browser does not support HTML5 video.
                             </video>
@@ -490,10 +493,10 @@
     <div class="accordion accordion-flush dark" id="accordionFlushExample">
         <div class="accordion-item">
             <h1 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed dark" id="toggle_btn_acc" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
-                    aria-controls="flush-collapseOne">
-                    <div class="text-center w-100 my-3 py-5"><span id="certificate_Gallery">Open</span><span>&nbsp
+                <button class="accordion-button collapsed dark" id="gallery" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <div class="text-center w-100 my-3 py-5 border border-info"><span
+                            id="certificate_Gallery">Open</span><span>
                             Certificate
                             Gallery</span></div>
                 </button>
@@ -508,47 +511,171 @@
                                 <div class="text-center">
                                     <button class="btn btn-default filter-button active" id="all"
                                         onclick="call(this.id)">All</button>
-                                    <button class="btn btn-default filter-button" id="dog"
-                                        onclick="call(this.id)">Dog</button>
-                                    <button class="btn btn-default filter-button" id="cat"
-                                        onclick="call(this.id)">Cat</button>
-                                    <button class="btn btn-default filter-button" id="fish"
-                                        onclick="call(this.id)">Fish</button>
-                                    <button class="btn btn-default filter-button" id="panda"
-                                        onclick="call(this.id)">Panda</button>
+                                    <button class="btn btn-default filter-button" id="Research&nbspPapers"
+                                        onclick="call(this.id)">Research Papers</button>
+                                    <button class="btn btn-default filter-button" id="Coursera"
+                                        onclick="call(this.id)">Coursera</button>
+                                    <button class="btn btn-default filter-button" id="Udemy"
+                                        onclick="call(this.id)">Udemy</button>
+                                    <button class="btn btn-default filter-button" id="Linked_In_Learning"
+                                        onclick="call(this.id)">LinkedIN Learning</button>
+                                    <button class="btn btn-default filter-button" id="Others"
+                                        onclick="call(this.id)">Others</button>
                                 </div>
                             </div>
 
-                            <a href="https://upload.wikimedia.org/wikipedia/commons/0/0e/Atlanta_Zoo_Panda.jpg"
-                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter panda">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Atlanta_Zoo_Panda.jpg">
+                            <a href="./assets/images/certificates/Get_set_code.jpg" class=" glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter
+                            Others">
+                                <img src="./assets/images/certificates/Get_set_code.jpg">
                             </a>
-                            <a href="https://s3.amazonaws.com/assets.prod.vetstreet.com/65/eb3fc0a34211e087a80050568d634f/file/Singapura-4-645mk062311.jpg"
-                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter cat">
+                            <a href="./assets/images/certificates/0002.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Others">
+                                <img src="./assets/images/certificates/0002.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0002.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0002.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0003.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0003.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0004.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0004.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0005.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0005.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0006.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0006.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0007.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0007.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0008.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0008.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0009.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0009.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0010.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0010.jpg">
+                            </a>
+                            <a href="./assets/images/certificates/Coursera/0001.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
+                                <img src="./assets/images/certificates/Coursera/0001.jpg">
+                            </a>
+                            <!-- Udemy -->
+                            <a href="./assets/images/certificates/udemy/0001.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0001.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0002.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0002.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0003.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0003.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0004.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0004.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0005.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0005.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0006.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0006.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0007.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0007.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0008.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0008.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0009.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0009.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0010.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0010.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0011.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0011.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0012.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0012.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0013.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0013.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0014.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0014.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0015.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0015.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0016.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0016.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0017.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0017.jpg">
+                            </a>
+
+                            <a href="./assets/images/certificates/udemy/0018.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
+                                <img src="./assets/images/certificates/udemy/0018.jpg">
+                            </a>
+
+
+
+                            <!-- linkedIn -->
+
+                            <a href="./assets/images/certificates/Linked_In_Learning/0001.jpg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Linked_In_Learning">
+                                <img src="./assets/images/certificates/Linked_In_Learning/0001.jpg">
+                            </a>
+                            <!-- Research Paper -->
+                            <a href="./assets/images/certificates/ResearchPaper/WhatsApp Image 2021-01-09 at 12.09.46 PM.jpeg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Research&nbspPapers">
                                 <img
-                                    src="https://s3.amazonaws.com/assets.prod.vetstreet.com/65/eb3fc0a34211e087a80050568d634f/file/Singapura-4-645mk062311.jpg">
-                            </a>
-                            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAtECi6fhmyr3QmqHqIZ8hLynoueGEKMvlMngP1PkvkTDJ8AoM"
-                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter panda">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAtECi6fhmyr3QmqHqIZ8hLynoueGEKMvlMngP1PkvkTDJ8AoM">
-                            </a>
-                            <a href="https://upload.wikimedia.org/wikipedia/commons/4/42/%C2%A1Panda_en_peligro_de_extinci%C3%B3n%21.jpg"
-                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter panda">
-                                <img
-                                    src="https://upload.wikimedia.org/wikipedia/commons/4/42/%C2%A1Panda_en_peligro_de_extinci%C3%B3n%21.jpg">
-                            </a>
-                            <a href="http://pngimg.com/uploads/fish/fish_PNG25129.png"
-                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter fish">
-                                <img src="http://pngimg.com/uploads/fish/fish_PNG25129.png">
-                            </a>
-                            <a href="https://cdn.pixabay.com/photo/2016/11/01/23/38/beach-1790049_960_720.jpg"
-                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dog">
-                                <img src="https://cdn.pixabay.com/photo/2016/11/01/23/38/beach-1790049_960_720.jpg">
-                            </a>
-                            <a href="http://www.malaysiacatclub.com/breeds/somali1.jpg"
-                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter cat">
-                                <img src="http://www.malaysiacatclub.com/breeds/somali1.jpg">
+                                    src="./assets/images/certificates/ResearchPaper/WhatsApp Image 2021-01-09 at 12.09.46 PM.jpeg">
                             </a>
                         </div>
                     </div>

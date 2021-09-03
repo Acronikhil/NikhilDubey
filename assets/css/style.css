@@ -481,7 +481,7 @@ h6 {
 }
 .gallery-title {
 	font-size: 36px;
-	color: #42b32f;
+	color: var(--pcolor);
 	text-align: center;
 	font-weight: 500;
 	margin-bottom: 70px;
@@ -496,22 +496,22 @@ h6 {
 }
 .filter-button {
 	font-size: 18px;
-	border: 1px solid #42b32f;
+	border: 1px solid var(--pcolor);
 	border-radius: 5px;
 	text-align: center;
-	color: #42b32f;
+	color: var(--pcolor);
 	margin-bottom: 30px;
 }
 .filter-button:hover {
 	font-size: 18px;
-	border: 1px solid #42b32f;
+	border: 1px solid var(--pcolor);
 	border-radius: 5px;
 	text-align: center;
 	color: #ffffff;
-	background-color: #42b32f;
+	background-color: var(--pcolor);
 }
 .filter-button.active {
-	background-color: #42b32f;
+	background-color: var(--pcolor);
 	color: white;
 }
 .port-image {

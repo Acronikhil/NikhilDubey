@@ -130,6 +130,7 @@ const feemplay = document.getElementById("feemplay");
 const btnText = document.getElementById("btnText");
 let videoState = "paused";
 const videoPlay = (name, btnId) => {
+	name.load();
 	name.play();
 	name.requestFullscreen();
 	videoState = "playing";

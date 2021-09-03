@@ -29,13 +29,13 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px rgb(58, 58, 58);
+	box-shadow: inset 0 0 5px rgb(99, 98, 98);
 	border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #585454;
+	background: #b10000;
 	border-radius: 10px;
 }
 
@@ -191,6 +191,7 @@ h6 {
 .border {
 	border: 1px solid #7510f7 !important;
 	border-radius: 20px;
+	color: #7510f7;
 }
 
 .border:hover {

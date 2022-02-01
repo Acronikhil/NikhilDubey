@@ -51,7 +51,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background: #070707
-		url("../../47128.jpg") no-repeat
+		url("https://images.unsplash.com/photo-1604768276879-c046493fefa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") no-repeat
 		center center;
 	background-size: cover;
 	z-index: 99999;

@@ -4,7 +4,7 @@ var preloader = document.getElementById("loading");
 // var hide = document.getElementsByClassName("hide");
 
 function LoaderFunction() {
-	var delayInMilliseconds = 1000; //1 second
+	var delayInMilliseconds = 0.1; //1 second
 
 	setTimeout(function () {
 		//your code to be executed after 1 second

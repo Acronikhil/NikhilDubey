@@ -82,68 +82,81 @@ const songs = [
 		title: "Jab_Tak_MSD",
 	},
 	{
-	name: "Ping_Pong",
-	title: "Ping_Pong",
-},
-{
-	name: "Turn_Down_for_What",
-	title: "Turn_Down_for_What",
-},
-{
-	name: "Bird_Machine",
-	title: Bird_Machine
-},
-{
-	name: "Magenta_Riddim",
-	title: "Magenta_Riddim",
-},{
-	name: "Not_Tonight",
-	title: "Not_Tonight",
-},{
-	name: "Panda",
-	title: "Panda",
-},{
-	name: "Playboy_-_Barely_Alive_Remix",
-	title: "Playboy_-_Barely_Alive_Remix",
-},{
-	name: "Talk_Dirty__feat__2_Chainz_",
-	title: "Talk_Dirty__feat__2_Chainz_",
-},{
-	name: "Tremor_-_Sensation_2014_Anthem",
-	title: "Tremor_-_Sensation_2014_Anthem",
-},{
-	name: "Yes_We_Faded_-_Original_Mix",
-	title: "Yes_We_Faded_-_Original_Mix",
-},
-{
-	name: "Bigfoot_-_Dillon_Francis_Remix",
-	title: "Bigfoot_-_Dillon_Francis_Remix",
-},
-{
-	name: "Breathe_Into_Me",
-	title: "Breathe_Into_Me",
-},{
-	name: "College_Drop",
-	title: "College_Drop",
-},{
-	name: "Dirty_Vibe_-_DJ_Snake___Aazar_Remix",
-	title: "Dirty_Vibe_-_DJ_Snake___Aazar_Remix",
-},{
-	name: "Don_t_Let_Me_Down",
-	title: "Don_t_Let_Me_Down",
-},{
-	name: "Don_t_Let_Me_Down",
-	title: "Don_t_Let_Me_Down",
-},{
-	name: "Let_Me_Love_You",
-	title: "Let_Me_Love_You",
-},{
-	name: "UFO_-_Trap_Edit",
-	title: "UFO_-_Trap_Edit",
-},{
-	name: "I_m_an_Albatraoz",
-	title: "I_m_an_Albatraoz",
-},
+		name: "Ping_Pong",
+		title: "Ping_Pong",
+	},
+	{
+		name: "Turn_Down_for_What",
+		title: "Turn_Down_for_What",
+	},
+	{
+		name: "Bird_Machine",
+		title: Bird_Machine
+	},
+	{
+		name: "Magenta_Riddim",
+		title: "Magenta_Riddim",
+	},
+	{
+		name: "Not_Tonight",
+		title: "Not_Tonight",
+	},
+	{
+		name: "Panda",
+		title: "Panda",
+	},
+	{
+		name: "Playboy_-_Barely_Alive_Remix",
+		title: "Playboy_-_Barely_Alive_Remix",
+	},
+	{
+		name: "Talk_Dirty__feat__2_Chainz_",
+		title: "Talk_Dirty__feat__2_Chainz_",
+	},
+	{
+		name: "Tremor_-_Sensation_2014_Anthem",
+		title: "Tremor_-_Sensation_2014_Anthem",
+	},
+	{
+		name: "Yes_We_Faded_-_Original_Mix",
+		title: "Yes_We_Faded_-_Original_Mix",
+	},
+	{
+		name: "Bigfoot_-_Dillon_Francis_Remix",
+		title: "Bigfoot_-_Dillon_Francis_Remix",
+	},
+	{
+		name: "Breathe_Into_Me",
+		title: "Breathe_Into_Me",
+	},
+	{
+		name: "College_Drop",
+		title: "College_Drop",
+	},
+	{
+		name: "Dirty_Vibe_-_DJ_Snake___Aazar_Remix",
+		title: "Dirty_Vibe_-_DJ_Snake___Aazar_Remix",
+	},
+	{
+		name: "Don_t_Let_Me_Down",
+		title: "Don_t_Let_Me_Down",
+	},
+	{
+		name: "Don_t_Let_Me_Down",
+		title: "Don_t_Let_Me_Down",
+	},
+	{
+		name: "Let_Me_Love_You",
+		title: "Let_Me_Love_You",
+	},
+	{
+		name: "UFO_-_Trap_Edit",
+		title: "UFO_-_Trap_Edit",
+	},
+	{
+		name: "I_m_an_Albatraoz",
+		title: "I_m_an_Albatraoz",
+	},
 ];
 songIndex = 0;
 

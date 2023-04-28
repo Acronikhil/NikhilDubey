@@ -1,5 +1,5 @@
 // Loader Function
-
+console.log("Script working");
 var preloader = document.getElementById("loading");
 // var hide = document.getElementsByClassName("hide");
 

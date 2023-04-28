@@ -30,7 +30,7 @@ $(document).ready(function () {
 	});
 });
 
-// Play Music
+// Play Music should work now
 // let play = () => {
 // 	let music = document.getElementById("music");
 // 	let sr = document.getElementById("music").src;

@@ -91,7 +91,7 @@ const songs = [
 	},
 	{
 		name: "Bird_Machine",
-		title: Bird_Machine
+		title: "Bird_Machine",
 	},
 	{
 		name: "Magenta_Riddim",

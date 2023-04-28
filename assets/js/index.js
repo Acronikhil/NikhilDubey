@@ -61,6 +61,26 @@ const songs = [
 		name: "Fly_Me",
 		title: "Fly Me To The Moon",
 	},
+	{
+		name: "This_Trap",
+		title: "This Trap 🥳",
+	},
+	{
+		name: "Riot",
+		title: "Riot",
+	},
+	{
+		name: "The_People",
+		title: "The_People",
+	},
+	{
+		name: "Human",
+		title: "Human",
+	},
+	{
+		name: "Jab_Tak__From__M_S_Dhoni_-_The_Untold_Story__",
+		title: "Jab_Tak_MSD",
+	},
 ];
 songIndex = 0;
 

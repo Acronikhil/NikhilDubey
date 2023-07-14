@@ -51,6 +51,7 @@ const next = document.getElementById("next");
 const music_title = document.getElementById("music_title");
 const music_state = document.getElementById("music_state");
 const music_name = document.getElementById("music_name");
+const music_stat = document.getElementById("musicStat");
 
 const songs = [
 	{
@@ -71,7 +72,7 @@ const songs = [
 	},
 	{
 		name: "The_People",
-		title: "The_People",
+		title: "The People",
 	},
 	{
 		name: "Human",
@@ -79,27 +80,27 @@ const songs = [
 	},
 	{
 		name: "Jab_Tak__From__M_S_Dhoni_-_The_Untold_Story__",
-		title: "Jab_Tak_MSD",
+		title: "JabTak MSD",
 	},
 	{
 		name: "Ping_Pong",
-		title: "Ping_Pong",
+		title: "Ping Pong",
 	},
 	{
 		name: "Turn_Down_for_What",
-		title: "Turn_Down_for_What",
+		title: "Turn Down for What",
 	},
 	{
 		name: "Bird_Machine",
-		title: "Bird_Machine",
+		title: "Bird Machine",
 	},
 	{
 		name: "Magenta_Riddim",
-		title: "Magenta_Riddim",
+		title: "Magenta Riddim",
 	},
 	{
 		name: "Not_Tonight",
-		title: "Not_Tonight",
+		title: "Not Tonight",
 	},
 	{
 		name: "Panda",
@@ -107,55 +108,55 @@ const songs = [
 	},
 	{
 		name: "Playboy_-_Barely_Alive_Remix",
-		title: "Playboy_-_Barely_Alive_Remix",
+		title: "Playboy Barely Alive Remix",
 	},
 	{
 		name: "Talk_Dirty__feat__2_Chainz_",
-		title: "Talk_Dirty__feat__2_Chainz_",
+		title: "Talk Dirty feat 2 Chainz",
 	},
 	{
 		name: "Tremor_-_Sensation_2014_Anthem",
-		title: "Tremor_-_Sensation_2014_Anthem",
+		title: "Tremor Sensation 2014 Anthem",
 	},
 	{
 		name: "Yes_We_Faded_-_Original_Mix",
-		title: "Yes_We_Faded_-_Original_Mix",
+		title: "Yes We Faded Original Mix",
 	},
 	{
 		name: "Bigfoot_-_Dillon_Francis_Remix",
-		title: "Bigfoot_-_Dillon_Francis_Remix",
+		title: "Bigfoot Dillon Francis Remix",
 	},
 	{
 		name: "Breathe_Into_Me",
-		title: "Breathe_Into_Me",
+		title: "Breathe Into Me",
 	},
 	{
 		name: "College_Drop",
-		title: "College_Drop",
+		title: "College Drop",
 	},
 	{
 		name: "Dirty_Vibe_-_DJ_Snake___Aazar_Remix",
-		title: "Dirty_Vibe_-_DJ_Snake___Aazar_Remix",
+		title: "Dirty Vibe DJ Snake Aazar Remix",
 	},
 	{
 		name: "Don_t_Let_Me_Down",
-		title: "Don_t_Let_Me_Down",
+		title: "Don't Let Me Down",
 	},
 	{
 		name: "Don_t_Let_Me_Down",
-		title: "Don_t_Let_Me_Down",
+		title: "Don'tLet Me Down",
 	},
 	{
 		name: "Let_Me_Love_You",
-		title: "Let_Me_Love_You",
+		title: "Let Me Love You",
 	},
 	{
 		name: "UFO_-_Trap_Edit",
-		title: "UFO_-_Trap_Edit",
+		title: "UFO Trap Edit",
 	},
 	{
 		name: "I_m_an_Albatraoz",
-		title: "I_m_an_Albatraoz",
+		title: "I'm an Albatraoz",
 	},
 ];
 
@@ -192,6 +193,7 @@ const playMusic = () => {
 
 	isPlaying = true;
 	play.classList.replace("fa-play-circle", "fa-pause-circle");
+	music_stat.classList.replace("fa-play-circle", "fa-pause-circle");
 	music_state.textContent = "Playing ";
 };
 // To Pause
@@ -200,6 +202,7 @@ const pauseMusic = () => {
 
 	isPlaying = false;
 	play.classList.replace("fa-pause-circle", "fa-play-circle");
+	music_stat.classList.replace("fa-pause-circle", "fa-play-circle");
 	music_state.textContent = "Paused ";
 };
 

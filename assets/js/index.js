@@ -161,6 +161,9 @@ const songs = [
 songIndex = 0;
 
 let isPlaying = false;
+
+
+
 // To Play
 const playMusic = () => {
 	console.log("Play To Chalra hai");
@@ -178,6 +181,11 @@ const pauseMusic = () => {
 	play.classList.replace("fa-pause-circle", "fa-play-circle");
 	music_state.textContent = "Paused ";
 };
+
+
+// $("#music").bind("ended", function(){
+// nextSong;	
+// });
 
 play.addEventListener("click", () => {
 	isPlaying ? pauseMusic() : playMusic();
@@ -202,6 +210,17 @@ const prevSong = () => {
 	loadSong(songs[songIndex]);
 	playMusic();
 };
+
+const autoPlayNext = () => {
+	var currentTime = music.currentTime;
+	var duration = music.duration;
+	// console.log("Im next song player: "+duration+"current time: "+currentTime);
+	
+	if(currentTime > duration-0.5){
+		// console.log("call next song");
+		nextSong();
+	}
+}
 
 // loadSong(songs[1]);
 next.addEventListener("click", nextSong);

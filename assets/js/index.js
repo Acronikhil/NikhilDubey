@@ -219,16 +219,18 @@ const nextSong = () => {
 	previousSongIndex= songIndex;
 	// songIndex = (songIndex + 1) % songsLength;
 	songIndex=  loadRandomSong();
-	playMusic();
 	showMusicDetails();
+	playMusic();
+	
 };
 
 const prevSong = () => {
 	// songIndex = (songIndex - 1 + songs.length) % songs.length;
 	songIndex = previousSongIndex;
 	loadSong(songs[songIndex]);
-	playMusic();
 	showMusicDetails();
+	playMusic();
+	
 };
 
 const autoPlayNext = () => {

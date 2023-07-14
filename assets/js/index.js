@@ -16,7 +16,7 @@ function LoaderFunction() {
 // Change Color Of Dribble
 
 let change = () => {
-	console.log("IM CALLED");
+	// console.log("IM CALLED");
 	let a = document.getElementsByClassName("ME");
 	a.style.color = "white";
 };
@@ -158,7 +158,28 @@ const songs = [
 		title: "I_m_an_Albatraoz",
 	},
 ];
-songIndex = 0;
+
+let songsLength = songs.length;
+
+const loadSong = (songs) => {
+	music.src = "./assets/" + songs.name + ".mp3";
+	music_title.title = songs.title;
+	music_name.innerHTML = `${songs.title}`;
+};
+
+let loadRandomSong = ()=>{
+	let randIndex = Math.floor(Math.random() * songsLength);
+	// console.log(`Random index: ${randIndex}`);
+	loadSong(songs[randIndex]) ;
+	return randIndex;
+}
+
+let previousSongIndex =0;
+let songIndex = loadRandomSong();
+
+// songIndex = randomSongIndex();
+
+
 
 let isPlaying = false;
 
@@ -166,7 +187,7 @@ let isPlaying = false;
 
 // To Play
 const playMusic = () => {
-	console.log("Play To Chalra hai");
+	// console.log("Play To Chalra hai");
 	music.play();
 
 	isPlaying = true;
@@ -183,32 +204,28 @@ const pauseMusic = () => {
 };
 
 
-// $("#music").bind("ended", function(){
-// nextSong;	
-// });
-
 play.addEventListener("click", () => {
 	isPlaying ? pauseMusic() : playMusic();
 });
 
 // change music
 
-const loadSong = (songs) => {
-	music.src = "./assets/" + songs.name + ".mp3";
-	music_title.title = songs.title;
-	music_name.innerHTML = `${songs.title}`;
-};
+
 
 const nextSong = () => {
-	songIndex = (songIndex + 1) % songs.length;
-	loadSong(songs[songIndex]);
+	previousSongIndex= songIndex;
+	// songIndex = (songIndex + 1) % songsLength;
+	songIndex=  loadRandomSong();
 	playMusic();
+	showMusicDetails();
 };
 
 const prevSong = () => {
-	songIndex = (songIndex - 1 + songs.length) % songs.length;
+	// songIndex = (songIndex - 1 + songs.length) % songs.length;
+	songIndex = previousSongIndex;
 	loadSong(songs[songIndex]);
 	playMusic();
+	showMusicDetails();
 };
 
 const autoPlayNext = () => {
@@ -230,7 +247,7 @@ prev.addEventListener("click", prevSong);
 
 const alert_gen = document.getElementById("trigger");
 
-alert_gen.addEventListener("click", () => {
+const showMusicDetails = ()=> {
 	document.querySelector(".alert").classList.add("show");
 	document.querySelector(".alert").classList.remove("hide");
 	document.querySelector(".alert").classList.add("showAlert");
@@ -239,6 +256,9 @@ alert_gen.addEventListener("click", () => {
 		document.querySelector(".alert").classList.add("hide");
 	}, 3000);
 	console.log("im called");
+}
+alert_gen.addEventListener("click", () => {
+	showMusicDetails();
 });
 
 const feemplay = document.getElementById("feemplay");

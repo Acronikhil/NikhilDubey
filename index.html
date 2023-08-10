@@ -90,12 +90,15 @@
                         </ul>
                     </li> -->
                 </ul>
-                
+
             </div>
         </div>
     </nav>
 
+
     <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in">
+
+
         <div class="alert hide ">
             <span class="far fa-play-circle btn-state disabled " id="musicStat"></span>
             <span class="msg">&nbsp;<span id='music_name'>Saviour</span></span>
@@ -104,15 +107,22 @@
             </div>
         </div>
         <div class="m-0 p-0 w3-display-left" id="trigger">
-            <div class="my-1"> <a href="#music" class="btn " id="music_title" title="Saviour"><i
-                        class="fas fa-music w3-text-white w3-xlarge"></i></a>
+            <div>
+                <div style="width: 200px; float: left;">
+                    <marquee class="w3-text-white">Playing <span id="sType"></span> songs</marquee>
+                </div>
+                <div class="my-1"> <a href="#music" class="btn " id="music_title" title="Saviour"><i
+                            class="fas fa-music w3-text-white w3-xlarge"></i></a>
+                </div>
+                <div class="my-1"> <a class="btn" title="Play Music"><i
+                            class="far fa-play-circle w3-text-white w3-xlarge" id="play"></i></a></div>
+                <div class="my-1"> <a class="btn " title="Previous Music"><i
+                            class="fas fa-chevron-circle-left w3-text-white w3-xlarge" id="prev"></i></a></div>
+                <div class="my-1"> <a class="btn " title="Next Music"><i
+                            class="fas fa-chevron-circle-right w3-text-white w3-xlarge" id="next"></i></a></div>
             </div>
-            <div class="my-1"> <a class="btn" title="Play Music"><i class="far fa-play-circle w3-text-white w3-xlarge"
-                        id="play"></i></a></div>
-            <div class="my-1"> <a class="btn " title="Previous Music"><i
-                        class="fas fa-chevron-circle-left w3-text-white w3-xlarge" id="prev"></i></a></div>
-            <div class="my-1"> <a class="btn " title="Next Music"><i
-                        class="fas fa-chevron-circle-right w3-text-white w3-xlarge" id="next"></i></a></div>
+            <div class="my-1" id="lofi"> <a class="btn " title="Lofi Music"><i
+                        class="fas fa-headphones-alt w3-text-white w3-xlarge"></i></a></div>
         </div>
         <h1 class="page-header display-5 w3-text-white pt-lg-5 text-center  fw-bolder tstyle">Full-Stack
             Developer, Designer</h1>
@@ -121,7 +131,8 @@
             I do.
         </p>
         <div class="d-flex justify-content-center my-3 align-items-center pt-3">
-            <img src="https://raw.githubusercontent.com/Acronikhil/NikhilDubey/bc9247b18c545dfe072616ded3823272041cfdee/assets/images/mf-avatar%20(1).svg" alt="Image" width='150'>
+            <img src="https://raw.githubusercontent.com/Acronikhil/NikhilDubey/bc9247b18c545dfe072616ded3823272041cfdee/assets/images/mf-avatar%20(1).svg"
+                alt="Image" width='150'>
         </div>
         <div class="d-flex justify-content-center align-items-center pt-3" id="me">
             <img src="assets/images/hero.png" class="img-fluid" alt="Image" width='860'>
@@ -213,7 +224,8 @@
                             <h3 class="card-title"> App Developer</h3>
                         </div>
                         <div>
-                            <p class="card-text">I'm Basically a Full-Stack Developer. I Like to make Native Applications
+                            <p class="card-text">I'm Basically a Full-Stack Developer. I Like to make Native
+                                Applications
                                 that's why I use to make my most of the App using React Native. </p>
                         </div>
                         <div>
@@ -343,7 +355,8 @@
                         <img src="https://source.unsplash.com/1600x900/?party" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">Shopzee</h5>
-                            <p class="card-text">This is a e-commerce website which can be used to buy or sell any product0.</p>
+                            <p class="card-text">This is a e-commerce website which can be used to buy or sell any
+                                product0.</p>
                         </div>
                         <div class="card-footer bg-transparent border-secondary">
                             <h6 class="text-center text-success">Technologies Used</h6>
@@ -520,20 +533,21 @@
                                         onclick="call(this.id)">Others</button>
                                 </div>
                             </div>
-                             <marquee class="mt-5" behaviour="scroll" direction="left" scrollamount="12">
-                    <p class="w3-xlarge logo w3-text-light-grey ">NOTE: More Certificates are there to be uploaded.</p>
-                </marquee>
+                            <marquee class="mt-5" behaviour="scroll" direction="left" scrollamount="12">
+                                <p class="w3-xlarge logo w3-text-light-grey ">NOTE: More Certificates are there to be
+                                    uploaded.</p>
+                            </marquee>
                             <!-- Research Paper -->
                             <a href="./assets/images/certificates/ResearchPaper/WhatsApp Image 2021-01-09 at 12.09.46 PM.jpeg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Research&nbspPapers">
-                                <img
-                                    src="./assets/images/certificates/ResearchPaper/WhatsApp Image 2021-01-09 at 12.09.46 PM.jpeg" loading="lazy">
+                                <img src="./assets/images/certificates/ResearchPaper/WhatsApp Image 2021-01-09 at 12.09.46 PM.jpeg"
+                                    loading="lazy">
                             </a>
-                            
+
                             <a href="./assets/images/certificates/ResearchPaper/researchpaperCriminal.jpeg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Research&nbspPapers">
-                                <img
-                                    src="./assets/images/certificates/ResearchPaper/researchpaperCriminal.jpeg" loading="lazy">
+                                <img src="./assets/images/certificates/ResearchPaper/researchpaperCriminal.jpeg"
+                                    loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/Get_set_code.jpg" class=" glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter
@@ -683,7 +697,7 @@
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Linked_In_Learning">
                                 <img src="./assets/images/certificates/Linked_In_Learning/0001.jpg" loading="lazy">
                             </a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -707,7 +721,8 @@
                     <a href="https://www.instagram.com/20.dubey.nikhil/"></a><i
                         class=" handles w3-text-white p-2 fab fa-instagram w3-hover-text-black"></i>
                     <a href=""><i class=" handles w3-text-white p-2 fab fa-snapchat w3-hover-text-black"></i></a>
-                    <a href="https://github.com/Acronikhil/"><i class=" handles w3-text-white p-2 fab fa-github w3-hover-text-black"></i></a>
+                    <a href="https://github.com/Acronikhil/"><i
+                            class=" handles w3-text-white p-2 fab fa-github w3-hover-text-black"></i></a>
                     <a href=""><i class=" handles w3-text-white p-2 fab fa-pinterest-p w3-hover-text-black"></i></a>
                     <a href="https://twitter.com/NikhilD89993130"></a><i
                         class=" handles w3-text-white p-2 fab fa-twitter w3-hover-text-black"></i>
@@ -724,7 +739,7 @@
                         Dubey</a>
                 </p>
 
-                <audio src="./assets/Saviour.mp3" loop controls id="music" loading="lazy"   ontimeupdate="autoPlayNext()">
+                <audio src="./assets/Saviour.mp3" loop controls id="music" loading="lazy" ontimeupdate="autoPlayNext()">
 
                 </audio>
             </div>
@@ -744,7 +759,7 @@
             );
         </script>
 
- 
+
         <script src="./assets/js/glightbox.min.js"></script>
         <script src="./assets/js/light.js"></script>
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>

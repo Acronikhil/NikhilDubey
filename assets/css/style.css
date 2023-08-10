@@ -69,6 +69,8 @@ body {
 
 .tstyle {
 	font-family: "eurostile", "Nunito" !important;
+	z-index: -1;
+
 }
 
 .back {
@@ -415,6 +417,7 @@ h6 {
 /*Custom Alert Code */
 
 .alert {
+	/* float: right; */
 	background: hsla(236, 100%, 8%, 1);
 
 	background: linear-gradient(90deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 28%, 1) 100%);

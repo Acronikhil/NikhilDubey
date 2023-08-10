@@ -35,7 +35,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-    <title>Nikhil Dubey | Front-end Developer & Designer</title>
+    <title>Nikhil Dubey | Full-Stack Developer & Designer</title>
 
 
 
@@ -90,49 +90,58 @@
                         </ul>
                     </li> -->
                 </ul>
-                <!-- <div class="w3-display-right mx-2 w3-center">
-                    <div id="google_translate_element"></div>
-                </div> -->
+
             </div>
         </div>
     </nav>
 
+
     <div class="w3-container container-fluid pt-lg-5   " data-aos="zoom-in">
-        <div class="alert hide">
-            <span class="fas fa-exclamation-circle"></span>
-            <span class="msg"><span id='music_state'></span><span id='music_name'>Saviour</span></span>
+
+
+        <div class="alert hide ">
+            <span class="far fa-play-circle btn-state disabled " id="musicStat"></span>
+            <span class="msg">&nbsp;<span id='music_name'>Saviour</span></span>
             <div class="close-btn">
                 <span class="fas fa-times"></span>
             </div>
         </div>
         <div class="m-0 p-0 w3-display-left" id="trigger">
-            <div class="my-1"> <a href="#music" class="btn " id="music_title" title="Saviour"><i
-                        class="fas fa-music w3-text-white w3-xlarge"></i></a>
+            <div>
+                <div style="width: 200px; float: left;">
+                    <marquee class="w3-text-white">Playing <span id="sType"></span> songs</marquee>
+                </div>
+                <div class="my-1"> <a href="#music" class="btn " id="music_title" title="Saviour"><i
+                            class="fas fa-music w3-text-white w3-xlarge"></i></a>
+                </div>
+                <div class="my-1"> <a class="btn" title="Play Music"><i
+                            class="far fa-play-circle w3-text-white w3-xlarge" id="play"></i></a></div>
+                <div class="my-1"> <a class="btn " title="Previous Music"><i
+                            class="fas fa-chevron-circle-left w3-text-white w3-xlarge" id="prev"></i></a></div>
+                <div class="my-1"> <a class="btn " title="Next Music"><i
+                            class="fas fa-chevron-circle-right w3-text-white w3-xlarge" id="next"></i></a></div>
             </div>
-            <div class="my-1"> <a class="btn" title="Play Music"><i class="far fa-play-circle w3-text-white w3-xlarge"
-                        id="play"></i></a></div>
-            <div class="my-1"> <a class="btn " title="Previous Music"><i
-                        class="fas fa-chevron-circle-left w3-text-white w3-xlarge" id="prev"></i></a></div>
-            <div class="my-1"> <a class="btn " title="Next Music"><i
-                        class="fas fa-chevron-circle-right w3-text-white w3-xlarge" id="next"></i></a></div>
+            <div class="my-1" id="lofi"> <a class="btn " title="Lofi Music"><i
+                        class="fas fa-headphones-alt w3-text-white w3-xlarge"></i></a></div>
         </div>
-        <h1 class="page-header display-5 w3-text-white pt-lg-5 text-center  fw-bolder tstyle">Front-end
+        <h1 class="page-header display-5 w3-text-white pt-lg-5 text-center  fw-bolder tstyle">Full-Stack
             Developer, Designer</h1>
         <p class="w3-text-white pt-4 fw-light text-center">I design and code beautifully simple things, and I love
             what
             I do.
         </p>
         <div class="d-flex justify-content-center my-3 align-items-center pt-3">
-            <img src="https://mattfarley.ca/img/mf-avatar.svg" alt="Image" width='150'>
+            <img src="https://raw.githubusercontent.com/Acronikhil/NikhilDubey/bc9247b18c545dfe072616ded3823272041cfdee/assets/images/mf-avatar%20(1).svg"
+                alt="Image" width='150'>
         </div>
         <div class="d-flex justify-content-center align-items-center pt-3" id="me">
-            <img src="https://mattfarley.ca/img/hero.svg" class="img-fluid" alt="Image" width='860'>
+            <img src="assets/images/hero.png" class="img-fluid" alt="Image" width='860'>
         </div>
 
     </div>
 
     <section class="container-fluid  bg m-0 p-0">
-        <div class=" d-flex justify-content-center   p-0 ">
+        <div class=" d-flex justify-content-center   p-0 " style="z-index: 1 !important;">
             <div class="back pt-5" data-aos="zoom-in-up">
                 <h2 class="text-center fw-bold text-wrap w3-text-white">Hi, I’m Nikhil Dubey. Nice to meet you.</h1>
                     <p class="w3-text-white mt-5 euro ls fw-light lh-2 text-center text-wrap "
@@ -140,7 +149,7 @@
                         I'M BTech. IT Student. I'm hardworking person also a good learner. I love to learn new Tech. and
                         make projects. Also I have done various internships, I worked as React Native Developer in
                         SagurIT
-                        Technologies and as Angular Developer in TEN(The Entrepreneurship Network).</p>
+                        Technologies and as Angular Developer in TEN(The Enterpeneurship Network).</p>
             </div>
 
         </div>
@@ -152,7 +161,7 @@
                 <figure class="image my-lg-5"><img class="is-skill-icon"
                         src="https://mattfarley.ca/img/icons/frontend.svg">
                 </figure>
-                <h3 class="text-center tstyle">Front-End Developer</h3>
+                <h3 class="text-center tstyle">Full-Stack Developer</h3>
                 <p class="my-3">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
             </div>
             <div class="column2">
@@ -182,7 +191,7 @@
                             <h3 class="card-title fw-bold nunito">Web Developer</h3>
                         </div>
                         <div>
-                            <p class="card-text ">I'm Basically a Front-end Developer. I like to code things from
+                            <p class="card-text ">I'm Basically a Full-Stack Developer. I like to code things from
                                 scratch,
                                 and enjoy bringing ideas to life in
                                 the browser.</p>
@@ -215,7 +224,8 @@
                             <h3 class="card-title"> App Developer</h3>
                         </div>
                         <div>
-                            <p class="card-text">I'm Basically a Front-end Developer. I Like to make Native Applications
+                            <p class="card-text">I'm Basically a Full-Stack Developer. I Like to make Native
+                                Applications
                                 that's why I use to make my most of the App using React Native. </p>
                         </div>
                         <div>
@@ -345,9 +355,8 @@
                         <img src="https://source.unsplash.com/1600x900/?party" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-center text-success">Shopzee</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>
+                            <p class="card-text">This is a e-commerce website which can be used to buy or sell any
+                                product0.</p>
                         </div>
                         <div class="card-footer bg-transparent border-secondary">
                             <h6 class="text-center text-success">Technologies Used</h6>
@@ -444,7 +453,7 @@
                 <div class="box">
                     <div class="icon"><i class="fas fa-users purple"></i></div>
                     <div class="counter tstyle">3</div>
-                    <div class="text">Internhips</div>
+                    <div class="text">Internships</div>
                 </div>
                 <div class="box">
                     <div class="icon"><i class="w3-xxxlarge material-icons purple">sensors</i></div>
@@ -524,144 +533,160 @@
                                         onclick="call(this.id)">Others</button>
                                 </div>
                             </div>
+                            <marquee class="mt-5" behaviour="scroll" direction="left" scrollamount="12">
+                                <p class="w3-xlarge logo w3-text-light-grey ">NOTE: More Certificates are there to be
+                                    uploaded.</p>
+                            </marquee>
+                            <!-- Research Paper -->
+                            <a href="./assets/images/certificates/ResearchPaper/WhatsApp Image 2021-01-09 at 12.09.46 PM.jpeg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Research&nbspPapers">
+                                <img src="./assets/images/certificates/ResearchPaper/WhatsApp Image 2021-01-09 at 12.09.46 PM.jpeg"
+                                    loading="lazy">
+                            </a>
+
+                            <a href="./assets/images/certificates/ResearchPaper/researchpaperCriminal.jpeg"
+                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Research&nbspPapers">
+                                <img src="./assets/images/certificates/ResearchPaper/researchpaperCriminal.jpeg"
+                                    loading="lazy">
+                            </a>
 
                             <a href="./assets/images/certificates/Get_set_code.jpg" class=" glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter
                             Others">
-                                <img src="./assets/images/certificates/Get_set_code.jpg">
+                                <img src="./assets/images/certificates/Get_set_code.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/0002.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Others">
-                                <img src="./assets/images/certificates/0002.jpg">
+                                <img src="./assets/images/certificates/0002.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0002.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0002.jpg">
+                                <img src="./assets/images/certificates/Coursera/0002.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0003.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0003.jpg">
+                                <img src="./assets/images/certificates/Coursera/0003.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0004.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0004.jpg">
+                                <img src="./assets/images/certificates/Coursera/0004.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0005.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0005.jpg">
+                                <img src="./assets/images/certificates/Coursera/0005.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0006.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0006.jpg">
+                                <img src="./assets/images/certificates/Coursera/0006.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0007.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0007.jpg">
+                                <img src="./assets/images/certificates/Coursera/0007.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0008.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0008.jpg">
+                                <img src="./assets/images/certificates/Coursera/0008.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0009.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0009.jpg">
+                                <img src="./assets/images/certificates/Coursera/0009.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0010.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0010.jpg">
+                                <img src="./assets/images/certificates/Coursera/0010.jpg" loading="lazy">
                             </a>
                             <a href="./assets/images/certificates/Coursera/0001.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Coursera">
-                                <img src="./assets/images/certificates/Coursera/0001.jpg">
+                                <img src="./assets/images/certificates/Coursera/0001.jpg" loading="lazy">
                             </a>
                             <!-- Udemy -->
                             <a href="./assets/images/certificates/udemy/0001.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0001.jpg">
+                                <img src="./assets/images/certificates/udemy/0001.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0002.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0002.jpg">
+                                <img src="./assets/images/certificates/udemy/0002.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0003.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0003.jpg">
+                                <img src="./assets/images/certificates/udemy/0003.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0004.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0004.jpg">
+                                <img src="./assets/images/certificates/udemy/0004.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0005.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0005.jpg">
+                                <img src="./assets/images/certificates/udemy/0005.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0006.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0006.jpg">
+                                <img src="./assets/images/certificates/udemy/0006.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0007.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0007.jpg">
+                                <img src="./assets/images/certificates/udemy/0007.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0008.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0008.jpg">
+                                <img src="./assets/images/certificates/udemy/0008.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0009.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0009.jpg">
+                                <img src="./assets/images/certificates/udemy/0009.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0010.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0010.jpg">
+                                <img src="./assets/images/certificates/udemy/0010.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0011.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0011.jpg">
+                                <img src="./assets/images/certificates/udemy/0011.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0012.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0012.jpg">
+                                <img src="./assets/images/certificates/udemy/0012.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0013.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0013.jpg">
+                                <img src="./assets/images/certificates/udemy/0013.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0014.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0014.jpg">
+                                <img src="./assets/images/certificates/udemy/0014.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0015.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0015.jpg">
+                                <img src="./assets/images/certificates/udemy/0015.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0016.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0016.jpg">
+                                <img src="./assets/images/certificates/udemy/0016.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0017.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0017.jpg">
+                                <img src="./assets/images/certificates/udemy/0017.jpg" loading="lazy">
                             </a>
 
                             <a href="./assets/images/certificates/udemy/0018.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Udemy">
-                                <img src="./assets/images/certificates/udemy/0018.jpg">
+                                <img src="./assets/images/certificates/udemy/0018.jpg" loading="lazy">
                             </a>
 
 
@@ -670,14 +695,9 @@
 
                             <a href="./assets/images/certificates/Linked_In_Learning/0001.jpg"
                                 class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Linked_In_Learning">
-                                <img src="./assets/images/certificates/Linked_In_Learning/0001.jpg">
+                                <img src="./assets/images/certificates/Linked_In_Learning/0001.jpg" loading="lazy">
                             </a>
-                            <!-- Research Paper -->
-                            <a href="./assets/images/certificates/ResearchPaper/WhatsApp Image 2021-01-09 at 12.09.46 PM.jpeg"
-                                class="glightbox gallery_product col-6 col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Research&nbspPapers">
-                                <img
-                                    src="./assets/images/certificates/ResearchPaper/WhatsApp Image 2021-01-09 at 12.09.46 PM.jpeg">
-                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -700,11 +720,13 @@
                             class=" handles w3-text-white  p-2  fab fa-facebook-f "></i></a>
                     <a href="https://www.instagram.com/20.dubey.nikhil/"></a><i
                         class=" handles w3-text-white p-2 fab fa-instagram w3-hover-text-black"></i>
-                    <a href=""></a><i class=" handles w3-text-white p-2 fab fa-snapchat w3-hover-text-black"></i>
-                    <a href=""></a><i class=" handles w3-text-white p-2 fab fa-pinterest-p w3-hover-text-black"></i>
+                    <a href=""><i class=" handles w3-text-white p-2 fab fa-snapchat w3-hover-text-black"></i></a>
+                    <a href="https://github.com/Acronikhil/"><i
+                            class=" handles w3-text-white p-2 fab fa-github w3-hover-text-black"></i></a>
+                    <a href=""><i class=" handles w3-text-white p-2 fab fa-pinterest-p w3-hover-text-black"></i></a>
                     <a href="https://twitter.com/NikhilD89993130"></a><i
                         class=" handles w3-text-white p-2 fab fa-twitter w3-hover-text-black"></i>
-                    <a href=""></a><i class=" handles w3-text-white p-2 fab fa-linkedin w3-hover-text-black"></i>
+                    <a href=""><i class=" handles w3-text-white p-2 fab fa-linkedin w3-hover-text-black"></i></a>
                 </div>
 
                 <p class="w3-large w3-text-white mt-5 mb-3 py-3 created">
@@ -717,7 +739,7 @@
                         Dubey</a>
                 </p>
 
-                <audio src="./assets/Saviour.mp3" loop controls id="music">
+                <audio src="./assets/Saviour.mp3" loop controls id="music" loading="lazy" ontimeupdate="autoPlayNext()">
 
                 </audio>
             </div>
@@ -737,15 +759,7 @@
             );
         </script>
 
-        <script type="text/javascript">
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
-            }
-        </script>
 
-
-        <script type="text/javascript"
-            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         <script src="./assets/js/glightbox.min.js"></script>
         <script src="./assets/js/light.js"></script>
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>

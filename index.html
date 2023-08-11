@@ -108,9 +108,7 @@
         </div>
         <div class="m-0 p-0 w3-display-left" id="trigger">
             <div>
-                <div style="width: 200px; float: left;">
-                    <marquee class="w3-text-white">Playing <span id="sType"></span> songs</marquee>
-                </div>
+
                 <div class="my-1"> <a href="#music" class="btn " id="music_title" title="Saviour"><i
                             class="fas fa-music w3-text-white w3-xlarge"></i></a>
                 </div>
@@ -121,8 +119,17 @@
                 <div class="my-1"> <a class="btn " title="Next Music"><i
                             class="fas fa-chevron-circle-right w3-text-white w3-xlarge" id="next"></i></a></div>
             </div>
-            <div class="my-1" id="lofi"> <a class="btn " title="Lofi Music"><i
-                        class="fas fa-headphones-alt w3-text-white w3-xlarge"></i></a></div>
+            <div class="my-1 px-2"
+                style="width: fit-content; background-color: rgba(50, 35, 88, 0.784);  border-radius: 20px 100px; box-shadow: 0px 0px 100px 10px rgba(202, 240, 246, 0.784);">
+                <!-- <a class="btn " title="Lofi Music Toggle Button"><i
+                        class="fas fa-headphones-alt w3-text-white w3-xlarge"></i></a> -->
+                <div class="form-check w3-text-white form-switch form-check-reverse" style="padding-left: 45px;">
+
+                    Lofi &nbsp;
+
+                    <input class=" form-check-input" style="box-shadow: 0px 0px 50px 10px rgba(198, 203, 211, 0.784);" type="checkbox" id="lofi">
+                </div>
+            </div>
         </div>
         <h1 class="page-header display-5 w3-text-white pt-lg-5 text-center  fw-bolder tstyle">Full-Stack
             Developer, Designer</h1>

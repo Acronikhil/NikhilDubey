@@ -170,7 +170,6 @@ const music_title = document.getElementById("music_title");
 const music_name = document.getElementById("music_name");
 const music_stat = document.getElementById("musicStat");
 const lofiBtn = document.getElementById("lofi");
-const sType = document.getElementById("sType");
 
 let songsLength = songs.length;
 
@@ -196,8 +195,6 @@ let songIndex = loadRandomSong();
 // songIndex = randomSongIndex();
 
 let isPlaying = false;
-
-isLofiOn ? (sType.innerHTML = "Lofi") : (sType.innerHTML = "non lofi");
 
 // To Play
 const playMusic = () => {
@@ -250,7 +247,6 @@ const autoPlayNext = () => {
 const changeSongType = () => {
   songs = !isLofiOn ? lofi : nonLofisongs;
   isLofiOn = !isLofiOn;
-  isLofiOn ? (sType.innerHTML = "Lofi") : (sType.innerHTML = "non lofi");
   loadRandomSong();
   playMusic();
 };

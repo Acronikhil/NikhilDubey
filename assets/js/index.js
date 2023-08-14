@@ -124,6 +124,13 @@ const lofi = [
     name: "Lofi3",
     title: "Lofi3",
   },
+  {
+    name: "Faasle",
+    title: "Faasle",
+  },{
+    name: "For Aisha",
+    title: "For Aisha",
+  },
 ];
 
 let isLofiOn = false;

@@ -131,6 +131,18 @@ const lofi = [
     name: "For Aisha",
     title: "For Aisha",
   },
+  {
+    name: "Hidden In The Mist",
+    title: "Hidden In The Mist",
+  },
+  {
+   name: "Journey",
+    title: "Journey".
+  },
+  {
+    name: "Sweet Meetings",
+    titile: "Sweet Meetings",
+  }
 ];
 
 let isLofiOn = false;

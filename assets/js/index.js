@@ -141,7 +141,7 @@ const lofi = [
   },
   {
     name: "Sweet Meetings",
-    titile: "Sweet Meetings",
+    title: "Sweet Meetings",
   },
 ];
 

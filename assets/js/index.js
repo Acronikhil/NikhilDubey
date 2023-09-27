@@ -142,7 +142,7 @@ const lofi = [
   {
     name: "Sweet Meetings",
     titile: "Sweet Meetings",
-  }
+  },
 ];
 
 let isLofiOn = false;

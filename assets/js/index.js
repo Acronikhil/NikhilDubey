@@ -137,7 +137,7 @@ const lofi = [
   },
   {
    name: "Journey",
-    title: "Journey".
+    title: "Journey",
   },
   {
     name: "Sweet Meetings",

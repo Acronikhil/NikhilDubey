@@ -231,27 +231,6 @@ const videoPlayer = (videoId, btnId) => {
 
 };
 
-const toggle_btn = document.getElementById("gallery");
-const cerificateGallery = document.getElementById("certificate_Gallery");
-let Accordian = "collapsed";
-
-const openAcc = () => {
-    cerificateGallery.textContent = "Close ";
-    Accordian = "opened";
-    console.log("OpenAcc called");
-};
-
-const closeAcc = () => {
-    cerificateGallery.textContent = "Open ";
-    Accordian = "collapsed";
-    console.log("closeAcc called");
-};
-
-toggle_btn.addEventListener("click", () => {
-    console.log("Mia to call hua");
-    Accordian == "collapsed" ? openAcc() : closeAcc();
-});
-
 const songType = document.querySelector(".sng-type");
 
 $(".sng-type").on("click", () => {

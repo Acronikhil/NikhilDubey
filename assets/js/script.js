@@ -42,8 +42,8 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const music_title = document.getElementById("music_title");
 const music_name = document.getElementById("music_name");
-const music_stat = document.getElementById("musicStat");
-const lofiBtn = document.getElementById("lofi");
+const island = document.getElementById("musicIsland");
+const musicProgress = document.getElementById("musicProgress");
 
 var preloader = document.getElementById("loading");
 // var hide = document.getElementsByClassName("hide");
@@ -97,23 +97,30 @@ const playMusic = () => {
     if (videoManager && videoManager.currentVideo) {
         videoManager.pause(videoManager.currentVideo);
     }
-    music.load();
     music.muted = false;
     music.play();
 
     isPlaying = true;
-
-    play.classList.replace("fa-play-circle", "fa-pause-circle");
-    music_stat.classList.replace("fa-play-circle", "fa-pause-circle");
+    setPlayerState(true);
 };
 // To Pause
 const pauseMusic = () => {
     music.pause();
 
     isPlaying = false;
-    play.classList.replace("fa-pause-circle", "fa-play-circle");
-    music_stat.classList.replace("fa-pause-circle", "fa-play-circle");
+    setPlayerState(false);
 };
+
+// Sync the island chip with playback: icon, label and the animated equalizer
+function setPlayerState(playing) {
+    island.classList.toggle("is-playing", playing);
+    play.querySelector("i").className = playing ? "fas fa-pause" : "fas fa-play";
+    play.setAttribute("aria-label", playing ? "Pause music" : "Play music");
+}
+
+music.addEventListener("timeupdate", () => {
+    if (music.duration) musicProgress.style.width = (music.currentTime / music.duration) * 100 + "%";
+});
 
 play.addEventListener("click", () => {
     isPlaying ? pauseMusic() : playMusic();
@@ -149,27 +156,19 @@ next.addEventListener("click", nextSong);
 prev.addEventListener("click", prevSong);
 
 
-const alert_gen = document.getElementById("trigger");
-const musicAlert = document.querySelector(".alert");
-const musicAlertClose = document.querySelector(".alert .close-btn");
-
+// The island briefly expands ("peeks") to announce the track instead of a separate snackbar
+let peekTimer = null;
 const showMusicDetails = () => {
-    musicAlert.classList.add("show");
-    musicAlert.classList.remove("hide");
-    musicAlert.classList.add("showAlert");
-    setTimeout(function () {
-        musicAlert.classList.remove("show");
-        musicAlert.classList.add("hide");
-    }, 3000);
+    island.classList.add("is-peek");
+    clearTimeout(peekTimer);
+    peekTimer = setTimeout(() => island.classList.remove("is-peek"), 3500);
 };
-alert_gen.addEventListener("click", () => {
-    showMusicDetails();
-});
-musicAlertClose.addEventListener("click", () => {
-    musicAlert.classList.remove("show");
-    musicAlert.classList.add("hide");
-});
 
+// Tapping the art toggles the expanded view (useful on touch screens with no hover)
+music_title.addEventListener("click", () => {
+    clearTimeout(peekTimer);
+    island.classList.toggle("is-peek");
+});
 const feemplay = document.getElementById("feemplay");
 const btnText = document.getElementById("btnText");
 let videoState = "paused";
@@ -219,6 +218,8 @@ const videoPlayer = (videoId, btnId) => {
 
     if(btn.textContent === "Play"){
 
+        // Only one video plays at a time, so reset the other buttons' labels
+        document.querySelectorAll('[id$="BtnText"]').forEach((label) => { label.textContent = "Play"; });
         videoManager.play(videoId);
         btn.textContent = "Pause";
 
@@ -230,27 +231,6 @@ const videoPlayer = (videoId, btnId) => {
     }
 
 };
-
-const toggle_btn = document.getElementById("gallery");
-const cerificateGallery = document.getElementById("certificate_Gallery");
-let Accordian = "collapsed";
-
-const openAcc = () => {
-    cerificateGallery.textContent = "Close ";
-    Accordian = "opened";
-    console.log("OpenAcc called");
-};
-
-const closeAcc = () => {
-    cerificateGallery.textContent = "Open ";
-    Accordian = "collapsed";
-    console.log("closeAcc called");
-};
-
-toggle_btn.addEventListener("click", () => {
-    console.log("Mia to call hua");
-    Accordian == "collapsed" ? openAcc() : closeAcc();
-});
 
 const songType = document.querySelector(".sng-type");
 

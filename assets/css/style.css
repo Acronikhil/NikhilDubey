@@ -4698,6 +4698,7 @@ html.has-rocket-scroll .scroll-to-top-btn {
 	max-width: 1180px;
 	margin: 0 auto;
 	padding-top: 3.5rem;
+	container-type: inline-size;
 }
 
 .footer-cta {
@@ -4894,9 +4895,11 @@ html.has-rocket-scroll .scroll-to-top-btn {
 	border-radius: 6px;
 }
 
+/* Sized from the footer's own width (container units) so the full name always fits, on any screen */
 .footer-wordmark {
 	margin: 1rem 0 0;
-	font-size: clamp(3.2rem, 14.5vw, 12.5rem);
+	font-size: 10.5vw;
+	font-size: min(12.5rem, 11cqi);
 	font-weight: 800;
 	line-height: 0.85;
 	letter-spacing: -0.03em;

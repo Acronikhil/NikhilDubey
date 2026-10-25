@@ -59,11 +59,76 @@
         window.addEventListener("load", measure);
     }
 
+    // ---- Cosmic hero: typed roles, starfield and gentle mouse parallax ----
+    var hero = document.querySelector(".hero-section");
+    var typed = document.querySelector(".cosmo-typed");
+    if (typed) {
+        var words = typed.dataset.words.split("|");
+        if (reduceMotion) {
+            // No typing animation: just swap the word every few seconds
+            var w = 0;
+            setInterval(function () { w = (w + 1) % words.length; typed.textContent = words[w]; }, 2800);
+        } else {
+            var wi = 0, ci = words[0].length, deleting = true;
+            var tick = function () {
+                var word = words[wi];
+                ci += deleting ? -1 : 1;
+                typed.textContent = word.slice(0, ci);
+                var delay = deleting ? 40 : 75;
+                if (!deleting && ci === word.length) {
+                    deleting = true;
+                    delay = 1800;
+                    // Let the N.I.K.H.I.L core react to the role that was just typed
+                    document.dispatchEvent(new CustomEvent("hero:word", { detail: word }));
+                }
+                else if (deleting && ci === 0) { deleting = false; wi = (wi + 1) % words.length; delay = 300; }
+                setTimeout(tick, delay);
+            };
+            setTimeout(tick, 2200);
+        }
+    }
+
+    var starField = document.querySelector(".cosmo-stars");
+    if (starField) {
+        var frag = document.createDocumentFragment();
+        for (var s = 0; s < 70; s++) {
+            var star = document.createElement("i");
+            var size = Math.random() < 0.85 ? 1 + Math.random() * 1.5 : 2.5 + Math.random() * 1.5;
+            star.style.cssText = "left:" + (Math.random() * 100) + "%;top:" + (Math.random() * 100) + "%;width:" + size +
+                "px;height:" + size + "px;animation-delay:" + (Math.random() * 4) + "s;animation-duration:" + (2.5 + Math.random() * 3) + "s";
+            frag.appendChild(star);
+        }
+        starField.appendChild(frag);
+    }
+
+    if (hero && !reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+        var raf = null;
+        hero.addEventListener("pointermove", function (e) {
+            if (raf) return;
+            raf = requestAnimationFrame(function () {
+                raf = null;
+                var r = hero.getBoundingClientRect();
+                hero.style.setProperty("--px", ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
+                hero.style.setProperty("--py", ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
+            });
+        });
+        hero.addEventListener("pointerleave", function () {
+            hero.style.setProperty("--px", 0);
+            hero.style.setProperty("--py", 0);
+        });
+    }
+
     // ---- Navbar: compact state on scroll, active section highlight, auto-close on mobile ----
     var nav = document.querySelector(".portfolio-nav");
     if (nav) {
         var links = Array.from(nav.querySelectorAll(".nav-link[href^='#']"));
-        var onScroll = function () { nav.classList.toggle("is-scrolled", window.scrollY > 24); };
+        // Shrinking the sticky nav changes its height, and the browser's scroll anchoring then nudges
+        // scrollY back. A wide on/off gap (hysteresis) stops that from looping at the threshold.
+        var onScroll = function () {
+            var y = window.scrollY, scrolled = nav.classList.contains("is-scrolled");
+            if (!scrolled && y > 60) nav.classList.add("is-scrolled");
+            else if (scrolled && y < 10) nav.classList.remove("is-scrolled");
+        };
         window.addEventListener("scroll", onScroll, { passive: true });
         onScroll();
 
@@ -122,15 +187,19 @@
         });
     }
 
-    // ---- Rocket scrollbar (mouse/trackpad only) ----
+    // ---- Rocket scrollbar ----
+    // On touch screens it only shows while scrolling (like a native overlay scrollbar)
+    // and the track ignores taps, so it never blocks content near the screen edge.
     var rocket = document.querySelector(".rocket-scroll");
-    if (rocket && window.matchMedia("(pointer: fine)").matches) {
+    if (rocket) {
         var root = document.documentElement;
         var thumb = rocket.querySelector(".rocket-thumb");
         var trackEl = rocket.querySelector(".rocket-track");
         var trail = rocket.querySelector(".rocket-trail");
         var lastY = window.scrollY, idle = null, ticking = false, dragging = null;
+        var touch = window.matchMedia("(pointer: coarse)").matches;
         root.classList.add("has-rocket-scroll");
+        if (touch) root.classList.add("rocket-touch");
 
         var range = function () { return rocket.clientHeight - thumb.offsetHeight; };
         var maxScroll = function () { return root.scrollHeight - window.innerHeight; };
@@ -145,13 +214,14 @@
             thumb.style.transform = "translateY(" + pos + "px)";
             trail.style.height = pos + thumb.offsetHeight / 2 + "px";
 
-            if (y !== lastY) {
+            // Only turn the ship around on a real change of direction, not on a few pixels of jitter
+            if (Math.abs(y - lastY) >= 4) {
                 rocket.classList.toggle("going-up", y < lastY);
                 rocket.classList.add("is-moving");
                 clearTimeout(idle);
-                idle = setTimeout(function () { rocket.classList.remove("is-moving"); }, 180);
+                idle = setTimeout(function () { rocket.classList.remove("is-moving"); }, touch ? 1100 : 180);
+                lastY = y;
             }
-            lastY = y;
         };
         var request = function () { if (!ticking) { ticking = true; requestAnimationFrame(render); } };
         window.addEventListener("scroll", request, { passive: true });

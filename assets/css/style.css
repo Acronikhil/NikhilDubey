@@ -4347,6 +4347,18 @@ html.has-rocket-scroll .scroll-to-top-btn {
 	box-shadow: 0 0 20px rgba(0, 216, 255, 0.35);
 }
 
+.proj-link.ghost {
+	background: transparent;
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+.proj-link.ghost:hover,
+.proj-link.ghost:focus-visible {
+	border-color: rgba(161, 90, 253, 0.8);
+	background: rgba(117, 16, 247, 0.14);
+	box-shadow: none;
+}
+
 .proj-link .fa-arrow-right {
 	font-size: 0.75rem;
 	transition: transform 0.25s ease;

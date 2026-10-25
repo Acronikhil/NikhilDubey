@@ -59,7 +59,7 @@
     <link rel="shortcut icon" href="./assets/images/circle-cropped.png" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261025-8">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261025-13">
     <link rel="stylesheet" href="./assets/css/w3.css">
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -75,13 +75,13 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark portfolio-nav">
         <div class="container-fluid w3-container">
-            <a href="./assets/images/My_CP_Image.png" data-gallery="profile"
-                class="glightbox profile-photo-link mx-3 my-1" data-title="Nikhil Dubey"
-                aria-label="View Nikhil Dubey profile photo">
+            <button type="button" class="profile-photo-link mx-3 my-1" data-profile-open aria-haspopup="dialog"
+                aria-label="Open Nikhil Dubey's profile card">
                 <img src="./assets/images/My_CP_Image.png" class="img-responsive w3-circle profile-photo"
-                    alt="Nikhil Dubey profile photo" width="50">
-            </a>
-            <a class="navbar-brand text portfolio-brand" href="#">Nikhil Dubey</a>
+                    alt="Nikhil Dubey profile photo" width="50" height="50">
+            </button>
+            <a class="navbar-brand text portfolio-brand" href="#">Nikhil Dubey
+                <small>Consultant · Blue Altair</small></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -89,10 +89,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav w3-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#me">About Me</a>
+                        <a class="nav-link" href="#me">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#experience">Experience</a>
@@ -104,14 +101,38 @@
                         <a class="nav-link" href="#moreSkills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Certificates Gallery</a>
+                        <a class="nav-link" href="#gallery">Certificates</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#resume">Resume</a>
                     </li>
-
+                    <li class="nav-item nav-cta-item">
+                        <a class="nav-cta" href="#contact"><span class="gh-live-dot"></span>Let's talk</a>
+                    </li>
                 </ul>
 
+            </div>
+            <!-- Music player: a chip in the navbar that morphs open to show the track -->
+            <div class="island-slot">
+                <div class="island" id="musicIsland" role="region" aria-label="Music player">
+                    <button type="button" class="island-art" id="music_title" title="City Lights"
+                        aria-label="Show current track">
+                        <span class="island-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                    </button>
+                    <div class="island-info" aria-live="polite">
+                        <span class="island-label">Now playing</span>
+                        <span class="island-track" id="music_name">City Lights</span>
+                        <span class="island-progress" aria-hidden="true"><span id="musicProgress"></span></span>
+                    </div>
+                    <div class="island-controls">
+                        <button type="button" class="island-btn island-skip" id="prev" aria-label="Previous track"><i
+                                class="fas fa-step-backward"></i></button>
+                        <button type="button" class="island-btn island-play" id="play" aria-label="Play music"><i
+                                class="fas fa-play"></i></button>
+                        <button type="button" class="island-btn island-skip" id="next" aria-label="Next track"><i
+                                class="fas fa-step-forward"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -119,29 +140,6 @@
 
     <main class="container-fluid hero-section">
 
-
-        <div class="alert hide ">
-            <span class="far fa-play-circle btn-state disabled " id="musicStat"></span>
-            <span class="msg">&nbsp;<span id='music_name'>Saviour</span></span>
-            <div class="close-btn">
-                <span class="fas fa-times"></span>
-            </div>
-        </div>
-        <div class="my-2 p-0 w3-display-left" id="trigger">
-            <div class="glow-back">
-
-                <div class="my-1"> <a href="#music" class="btn" id="music_title" title="Saviour"><i
-                            class="fas fa-music w3-text-white w3-large music-btn"></i></a>
-                </div>
-                <div class="my-1"> <a class="btn" title="Play Music"><i
-                            class="far fa-play-circle w3-text-white w3-large music-btn" id="play"></i></a></div>
-                <div class="my-1"> <a class="btn" title="Previous Music"><i
-                            class="fas fa-chevron-circle-left w3-text-white w3-large music-btn" id="prev"></i></a></div>
-                <div class="my-1"> <a class="btn" title="Next Music"><i
-                            class="fas fa-chevron-circle-right w3-text-white w3-large music-btn" id="next"></i></a>
-                </div>
-            </div>
-        </div>
 
         <section class="hero-grid mt-2">
             <div class="hero-copy">
@@ -166,7 +164,7 @@
                     <span>Redis</span>
                 </div>
             </div>
-            <div class="hero-visual" id="me">
+            <div class="hero-visual">
                 <div class="hero-avatar-card">
                     <img class="hero-avatar avatar" src="./assets/images/mf-avatar (1).svg" alt="Developer avatar"
                         width="150" height="150" fetchpriority="high">
@@ -182,126 +180,92 @@
 
     </main>
 
-    <div class="container-fluid  bg m-0 p-0">
-        <div class=" d-flex justify-content-center   p-0 " style="z-index: 1 !important;">
-            <div class="back pt-5" data-aos="zoom-in-up">
-                <h2 class="text-center fw-bold text-wrap w3-text-white">Hi, I’m Nikhil Dubey.</h1>
-                    <p class="w3-text-white mt-5 euro ls fw-light lh-2 text-center "
-                        style="margin-bottom:12rem;  text-wrap-mode: wrap; text-wrap-style: pretty;">
-                        I’m a Full-Stack Developer with experience in building scalable web applications using Java,
-                        Spring Boot, React, Node.js, and PostgreSQL. Currently working at Blue Altair, I focus on
-                        developing robust backend systems, efficient APIs, and modern frontend interfaces.
-
-                        I enjoy solving complex technical problems, improving system performance, and building products
-                        that deliver real value to users. I’m always eager to learn new technologies and take on
-                        challenging projects that help me grow as a developer. </p>
+    <section class="about container" id="me" aria-labelledby="about-title">
+        <div class="about-card" data-aos="fade-up">
+            <div class="about-copy">
+                <span class="gh-kicker">About me</span>
+                <h2 class="about-title" id="about-title">Hi, I’m Nikhil Dubey.</h2>
+                <p class="about-lead">A Full Stack Developer who builds scalable web applications with Java, Spring
+                    Boot, React, Node.js and PostgreSQL.</p>
+                <p>As a Consultant at Blue Altair, I focus on robust backend systems, efficient APIs and modern
+                    frontend interfaces, and lately on mobile apps and Agentic AI.</p>
+                <p>I enjoy solving complex technical problems, improving system performance and shipping products
+                    that deliver real value to users. I’m always eager to learn and take on challenges that help
+                    me grow.</p>
+                <div class="about-actions">
+                    <a class="resume-btn resume-btn-primary" href="#contact"><i class="fas fa-paper-plane"
+                            aria-hidden="true"></i> Get in touch</a>
+                    <a class="resume-btn resume-btn-ghost" href="#experience"><i class="fas fa-route"
+                            aria-hidden="true"></i> My journey</a>
+                </div>
             </div>
 
-        </div>
-    </div>
-
-    <div class="skills ">
-
-        <div class="d-flex  text-center justify-content-center align-items-center">
-            <div class="card-group w3-card">
-                <div class="card w3-card " data-aos="fade-up">
-                    <div class="image mt-5 purple-text">
-                        <i class="fas fa-laptop-code display-3"></i>
-                    </div>
-
-                    <div class="card-body text-center">
-                        <div>
-                            <h3 class="card-title fw-bold nunito purple-text">Full Stack Developer</h3>
-                        </div>
-
-                        <div>
-                            <p class="card-text">
-                                Full-Stack Developer crafting scalable web apps and high-performance microservices with
-                                clean, efficient architecture.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 class="card-title purple-text">Languages & Technologies</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>TypeScript</li>
-                                <li>Java</li>
-                                <li>SQL</li>
-                                <li>REST APIs</li>
-                                <li>Microservices Architecture</li>
-                                <li>Tailwind CSS</li>
-                                <li>MEAN Stack</li>
-                                <li>MERN Stack</li>
-                            </ul>
-                            </p>
-                        </div>
-
-                        <div>
-                            <h4 class="card-title purple-text">Frameworks & Dev Tools</h4>
-                            <ul>
-                                <li>React</li>
-                                <li>Angular</li>
-                                <li>Spring Boot (Microservices)</li>
-                                <li>Hibernate / JPA</li>
-                                <li>Django</li>
-                                <li>Flask</li>
-                                <li>Bootstrap</li>
-                                <li>Docker</li>
-                                <li>Git & GitHub</li>
-                            </ul>
-                        </div>
-                        <!-- ``` -->
-
-                    </div>
-
+            <div class="terminal" aria-label="Quick facts">
+                <div class="terminal-bar" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                    <em>nikhil@portfolio: ~</em>
                 </div>
-
-                <div class="card" data-aos="fade-down">
-                    <figure class="image mt-5">
-
-                        <i class="fab fa-react purple-text"></i>
-                    </figure>
-                    <div class="card-body text-center">
-                        <div>
-                            <h3 class="card-title purple-text"> App Developer</h3>
-                        </div>
-                        <div>
-                            <p class="card-text">I enjoy developing applications that are efficient, reliable, and
-                                user-friendly. My focus is on building practical solutions that solve real-world
-                                problems through clean design and solid architecture. </p>
-                        </div>
-                        <div>
-                            <h4 class="card-title purple-text">Languages I worked with</h4>
-                            <p class="card-text ">
-                            <ul>
-                                <li>React Native</li>
-                                <li>Flutter</li>
-                                <li>Dart</li>
-                                <li>Android</li>
-                            </ul>
-                            </p>
-                        </div>
-                        <div>
-                            <h4 class="card-title purple-text">Dev Tools & Frameworks</h3>
-                                <ul style="list-style-type: none; padding-left: 0;">
-                                    <li>React Native</li>
-                                    <li>Android Studio</li>
-                                    <li>Flutter</li>
-                                    <li>X Code</li>
-                                    <li id="projects">VsCode</li>
-                                </ul>
-                        </div>
-
-                    </div>
+                <div class="terminal-body">
+                    <p class="terminal-cmd"><span class="t-prompt">$</span> neofetch</p>
+                    <dl class="terminal-facts">
+                        <dt>role</dt>
+                        <dd>Consultant @ Blue Altair</dd>
+                        <dt>stack</dt>
+                        <dd>Java · Spring Boot · React</dd>
+                        <dt>also</dt>
+                        <dd>Flutter · FastAPI · Agentic AI</dd>
+                        <dt>location</dt>
+                        <dd>Pune, India</dd>
+                        <dt>uptime</dt>
+                        <dd><span data-since="2022-06">4 yrs</span> in industry</dd>
+                        <dt>status</dt>
+                        <dd class="t-ok">● Open to collaborate</dd>
+                    </dl>
+                    <div class="terminal-colors" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                    <p class="terminal-cmd"><span class="t-prompt">$</span> <span class="t-cursor"></span></p>
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
+    <section class="services container" aria-labelledby="services-title">
+        <h2 class="visually-hidden" id="services-title">What I do</h2>
+        <div class="services-grid">
+            <article class="service-card" data-aos="fade-up" data-aos-delay="0">
+                <span class="service-icon" aria-hidden="true"><i class="fas fa-laptop-code"></i></span>
+                <h3>Full Stack Development</h3>
+                <p>Scalable web apps and high-performance microservices with clean, efficient architecture.</p>
+                <ul class="service-points">
+                    <li><i class="fas fa-check" aria-hidden="true"></i>REST APIs and microservices with Spring Boot</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i>Fast, modern React and Angular frontends</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i>Legacy UI modernisation and performance tuning</li>
+                </ul>
+                <ul class="service-stack" aria-label="Core technologies"><li>Java</li><li>Spring Boot</li><li>React</li><li>Angular</li><li>Node.js</li><li>SQL</li></ul>
+            </article>
+            <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <span class="service-icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></span>
+                <h3>Mobile App Development</h3>
+                <p>Cross-platform apps that are efficient, reliable and genuinely pleasant to use.</p>
+                <ul class="service-points">
+                    <li><i class="fas fa-check" aria-hidden="true"></i>Flutter and React Native apps from one codebase</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i>Offline storage and real-time API integration</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i>Android and iOS builds, ready for the stores</li>
+                </ul>
+                <ul class="service-stack" aria-label="Core technologies"><li>Flutter</li><li>Dart</li><li>React Native</li><li>Android</li></ul>
+            </article>
+            <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <span class="service-icon" aria-hidden="true"><i class="fas fa-robot"></i></span>
+                <h3>AI &amp; Integrations</h3>
+                <p>Practical AI and integrations that automate real business workflows.</p>
+                <ul class="service-points">
+                    <li><i class="fas fa-check" aria-hidden="true"></i>Agentic AI workflows and assistants</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i>Python services and APIs with FastAPI</li>
+                    <li><i class="fas fa-check" aria-hidden="true"></i>HubSpot CRM integrations and customisation</li>
+                </ul>
+                <ul class="service-stack" aria-label="Core technologies"><li>Python</li><li>FastAPI</li><li>Agentic AI</li><li>HubSpot</li></ul>
+            </article>
+        </div>
+    </section>
 
     <section class="experience container" id="experience">
         <div data-aos="fade-up">
@@ -311,6 +275,8 @@
             </p>
         </div>
 
+        <div class="exp-track">
+            <div class="exp-bus" aria-hidden="true"><span class="exp-packet"></span></div>
         <ol class="exp-timeline">
             <li class="exp-item current" data-aos="fade-up">
                 <div class="exp-logo" aria-hidden="true">BA</div>
@@ -496,292 +462,189 @@
                 </div>
             </li>
         </ol>
+        </div>
     </section>
 
-    <div class="my-5">
-        <div data-aos="fade-right" data-aos-anchor-placement="top-center">
-            <h1 class="text-center w3-text-white">My Recent Work</h1>
-        </div>
-        <p class="text-center fw-light w3-text-white ">Here are a few projects I've worked on recently. Want to see
-            more?<a href="mailto:20.nikhildubey@gmail.com" class="btn "><span class="glow-style" style="color: aqua;">
-                    Email
-                    me</span></a>
-        </p>
-
-
-
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100" data-aos="zoom-in" data-aos-anchor-placement="top-center">
-                        <img src="./assets/images/shok-sandesh.jpg" class="card-img-top video-thumb" alt="Shok Sandesh – create a condolence message online" loading="lazy" decoding="async">
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-success">Shok Sandesh (शोक संदेश)</h5>
-                            <p class="card-text">A free web app where any family can create a digital condolence
-                                message for a loved one — photo, ritual dates, venue map with QR code and family
-                                contacts — and send it on WhatsApp with each relative's name, as a link or a
-                                printed-style card image. Ready-made templates in Hindi and English, and every page
-                                is deleted automatically after the last ritual. Built in memory of my father,
-                                <a href="https://shok.message.dubeynikhil.in/" class="text-success position-relative" style="z-index: 2;">Late Shri Purnanand Dubey</a>.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-secondary">
-                            <h6 class="text-center text-success">Technologies Used</h6>
-
-                            <p>
-                            <ul class="pipe-list">
-                                <li>Cloudflare Workers</li>
-                                <li>D1 (SQLite)</li>
-                                <li>JavaScript</li>
-                                <li>Tailwind CSS</li>
-                                <li>Canvas API</li>
-                                <li>SEO</li>
-                            </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer w3-center">
-                            <a href="https://shoksandesh.dubeynikhil.in/" class=" stretched-link"><button
-                                    class="btn btn-success">Visit WebPage</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100" data-aos="zoom-in" data-aos-anchor-placement="top-center">
-                        <img src="./assets/images/Sync_bg.png" class="card-img-top video-thumb" alt="Sync pickleball booking platform" loading="lazy" decoding="async">
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-success">Sync Pickleball</h5>
-                            <p class="card-text">A modern sports booking platform where users can explore the Sync
-                                Pickleball arena, view available
-                                courts, and book playing slots online. The website provides a smooth user experience for
-                                slot reservations, schedule
-                                viewing, and information about the Sync Pickleball community.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-secondary">
-                            <h6 class="text-center text-success">Technologies Used</h6>
-
-                            <p>MERN Stack</p>
-                        </div>
-                        <div class="card-footer w3-center">
-                            <a href="https://www.syncpickleball.com/" class=" stretched-link"><button
-                                    class="btn btn-success">Visit WebPage</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 " data-aos="fade-right" data-aos-anchor-placement="top-center">
-                        <!-- <img src="https://source.unsplash.com/1600x900/?dj" class="card-img-top" alt="..."> -->
-
-                        <!-- <div> -->
-                        <!-- <div id="player"></div> -->
-                        <iframe id="feemplayer" class="card-img-top video-thumb yt-video" allowfullscreen width="560" height="315"
-                            src="https://www.youtube.com/embed/EFKKBurgQI4?enablejsapi=1" title="YouTube video player"
-                            frameborder="0" allow="autoplay" referrerpolicy="strict-origin-when-cross-origin"
-                            loading="lazy" allowfullscreen></iframe>
-                        <!-- <video id="feemplayer" class="card-img-top"
-                                id="myVideo" allowfullscreen>
-                                <source src="https://www.youtube.com/embed/EFKKBurgQI4?si=GwcAz4tWZ6akiOL5" referrerpolicy="strict-origin-when-cross-origin" type="video/mp4">
-
-                                Your browser does not support HTML5 video.
-                            </video> -->
-                        <!-- </div> -->
-
-                        <!-- width="640" height="480" -->
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-success">FEEM Player</h5>
-                            <p class="card-text">FEEM Player is a music player wich plays music according to your mood
-                                by reading your facial expression.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-secondary">
-                            <h6 class="text-center text-success">Technologies Used</h6>
-
-                            <p>
-                            <ul class="pipe-list">
-                                <li>Angular</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>ML</li>
-                                <li>TypeScript</li>
-                                <li>MySQL</li>
-                                <li>NodeJS</li>
-                            </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer w3-center">
-                            <a href="#feemplayer" onclick="videoPlayer('feemplayer','fBtnText')" class="stretched-link">
-                                <button class="btn btn-success">
-                                    <span id="fBtnText">Play</span> Video
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100" data-aos="fade-down" data-aos-anchor-placement="top-center">
-                        <!-- <img src="https://source.unsplash.com/1600x900/?party" class="card-img-top" alt="..."> -->
-                        <div>
-                            <iframe id="criminalPlayer" class="card-img-top video-thumb yt-video" allowfullscreen width="560"
-                                height="315" src="https://www.youtube.com/embed/D2GJjtbg2GU?enablejsapi=1"
-                                title="YouTube video player" frameborder="0" allow="autoplay"
-                                referrerpolicy="strict-origin-when-cross-origin" loading="lazy"
-                                allowfullscreen></iframe>
-
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-success">Criminal Detector</h5>
-                            <p class="card-text">Criminal Detector is a web App which can be used by only registered
-                                police to. New Police can register themself on app but they can login only when they are
-                                verified by admin. Police can Register, Update, Delete Criminal Record. He can also
-                                search criminal by uploading image. </p>
-                        </div>
-                        <div class="card-footer bg-transparent border-secondary">
-                            <h6 class="text-center text-success">Technologies Used</h6>
-
-                            <p>
-                            <ul class="pipe-list">
-                                <li>Django</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Python</li>
-                                <li>AI</li>
-                                <li>ML</li>
-                                <li>PostgreSQL</li>
-                            </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer w3-center">
-                            <a href="#criminalPlayer" onclick="videoPlayer('criminalPlayer','cBtnText')"
-                                class=" stretched-link"><button class="btn btn-success"><span id="cBtnText">Play</span>
-                                    Video</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card h-100" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
-                        <img src="https://images.unsplash.com/photo-1658297063569-162817482fb6?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top" alt="Shopzee" loading="lazy" decoding="async">
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-success">Shopzee</h5>
-                            <p class="card-text">This is a e-commerce website which can be used to buy or sell any
-                                product.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-secondary">
-                            <h6 class="text-center text-success">Technologies Used</h6>
-
-                            <p>
-                            <ul class="pipe-list">
-                                <li>Angular</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>Bootstrap</li>
-                            </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer w3-center">
-                            <!-- <a href="#gallery-lightbox" data-src="#" class=" stretched-link"><button class="btn btn-success">View</button></a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                        <img src="https://images.unsplash.com/photo-1495465798138-718f86d1a4bc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            class="card-img-top" alt="StuPro" loading="lazy" decoding="async">
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-success">StuPro</h5>
-                            <p class="card-text">Stupro is webapp mainly made for students. StuPro helps students by
-                                giving information about best Hostels, Laundries , paying guest facilities etc. Which
-                                can help
-                                them at new place. </p>
-                        </div>
-                        <div class="card-footer bg-transparent border-secondary">
-                            <h6 class="text-center text-success">Technologies Used</h6>
-
-                            <p>
-                            <ul class="pipe-list">
-                                <li>Angular</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>ML</li>
-                                <li>TypeScript</li>
-                            </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer w3-center">
-                            <!-- <a href="#gallery-lightbox" data-src="#" class=" stretched-link"><button class="btn btn-success">View</button></a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100" data-aos="zoom-in" data-aos-anchor-placement="top-bottom">
-                        <img src="./assets/images/covid.jpg" class="card-img-top" alt="CoviGo" loading="lazy"
-                            decoding="async">
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-success">CoviGo</h5>
-                            <p class="card-text">CoviGo is app which shows all the information about Total active cases,
-                                Death cases , Recovered Cases according to the country. After update it will also be
-                                showing vaccine related information. </p>
-                        </div>
-                        <div class="card-footer bg-transparent border-secondary">
-                            <h6 class="text-center text-success">Technologies Used</h6>
-
-                            <p>
-                            <ul class="pipe-list">
-                                <li>React Native</li>
-                                <li>JavaScript</li>
-                                <li>Advanced JavaScript (ES6)</li>
-                            </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer w3-center">
-                            <!-- <a href="#gallery-lightbox" data-src="#" class=" stretched-link"><button class="btn btn-success">View</button></a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class='d-flex justify-content-center my-3'>
-            <button class="btn purple border" id="seeMore" onmouseenter="change()"><i class="fab fa-dribbble purple "
-                    id="ME"></i> &nbsp;
-                See More On
-                Dribble</button>
-        </div> -->
-
-    </div>
-
-    <div class="container" id="moreSkills" data-aos="fade-up">
-        <h1 class="w3-padding-16 w3-text-light-grey text-center">My IT Skills</h1>
-        <p class="w3-wide w3-text-white my-2 w3-large" title="HTML, CSS, JS, Bootstrap, TailwindCSS">Web Design
-            <span class="w3-tiny w3-hide-small"> &nbsp;(Hover To See More)</span>
-        </p>
-        <div class="" style="background-color: var(--gcolor2);">
-            <div class="" style="height:28px;width:95%; background-color: var(--pcolor);"
-                title="HTML, CSS, JS, Bootstrap, TailwindCSS"></div>
+    <section class="proj-section container" id="projects" aria-labelledby="proj-title">
+        <div class="stack-head" data-aos="fade-up">
+            <span class="gh-kicker">Selected work</span>
+            <h2 class="stack-title" id="proj-title">My Recent Work</h2>
+            <p class="stack-sub">Products I've designed, built and launched. Want to see more?
+                <a class="proj-mail" href="mailto:20.nikhildubey@gmail.com">Email me</a></p>
         </div>
 
-        <p class="w3-wide w3-text-white my-2 w3-large" title="Java Springboot, Microservices, NodeJS">Backend
-            Development
-            <span class="w3-tiny w3-hide-small"> &nbsp;(Hover To See More)</span>
-        </p>
-        <div class="" style="background-color: var(--gcolor2);">
-            <div class="" style="height:28px;width:93%; background-color: var(--pcolor);"
-                title="Java Springboot, Microservices, NodeJS"></div>
+        <div class="cert-filters proj-filters" role="toolbar" aria-label="Filter projects">
+            <button type="button" class="cert-chip active" data-filter="all" aria-pressed="true">All <span>7</span></button>
+            <button type="button" class="cert-chip" data-filter="web" aria-pressed="false">Web <span>6</span></button>
+            <button type="button" class="cert-chip" data-filter="mobile" aria-pressed="false">Mobile <span>1</span></button>
+            <button type="button" class="cert-chip" data-filter="ai" aria-pressed="false">AI / ML <span>2</span></button>
         </div>
 
-        <p class="w3-wide w3-text-white my-2 w3-large" title="ReactJS, JSX,  Django, Flask">Web Framework <span
-                class="w3-tiny w3-hide-small"> &nbsp;(Hover To See More)</span></p>
-        <div class="w3-white " style=" background-color: var(--gcolor2);">
-            <div class=" " style="height:28px;width:85%; background-color: var(--pcolor);"
-                title="ReactJS, JSX,  Django, Flask"></div>
+        <div class="proj-grid">
+            <article class="proj-card featured" data-category="web" data-aos="fade-up">
+                <div class="proj-media">
+                    <img src="./assets/images/shok-sandesh.jpg" alt="Shok Sandesh – create a condolence message online" loading="lazy" decoding="async">
+                    <span class="proj-status live"><span class="proj-dot"></span>Live</span>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-index">PRJ-01 · Featured</span>
+                    <h3>Shok Sandesh (शोक संदेश)</h3>
+                    <p>A free web app where any family can create a digital condolence message for a loved one — photo, ritual
+                        dates, venue map with QR code and family contacts — and send it on WhatsApp with each relative's
+                        name, as a link or a printed-style card image. Ready-made templates in Hindi and English, and every
+                        page is deleted automatically after the last ritual. Built in memory of my father,
+                        <a href="https://shok.message.dubeynikhil.in/" target="_blank" rel="noopener">Late Shri Purnanand Dubey</a>.</p>
+                    <ul class="service-stack" aria-label="Technologies used"><li>Cloudflare Workers</li><li>D1 (SQLite)</li><li>JavaScript</li><li>Tailwind CSS</li><li>Canvas API</li><li>SEO</li></ul>
+                    <div class="proj-actions"><a class="proj-link primary" href="https://shoksandesh.dubeynikhil.in/" target="_blank" rel="noopener">Visit website <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                </div>
+            </article>
+            <article class="proj-card" data-category="web" data-aos="fade-up">
+                <div class="proj-media">
+                    <img src="./assets/images/Sync_bg.png" alt="Sync pickleball booking platform" loading="lazy" decoding="async">
+                    <span class="proj-status live"><span class="proj-dot"></span>Live</span>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-index">PRJ-02</span>
+                    <h3>Sync Pickleball</h3>
+                    <p>A sports booking platform where players explore the Sync Pickleball arena, check available courts and book playing slots online, with schedules and community updates.</p>
+                    <ul class="service-stack" aria-label="Technologies used"><li>MongoDB</li><li>Express.js</li><li>React</li><li>Node.js</li></ul>
+                    <div class="proj-actions"><a class="proj-link primary" href="https://www.syncpickleball.com/" target="_blank" rel="noopener">Visit website <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>
+                </div>
+            </article>
+            <article class="proj-card" data-category="web ai" data-aos="fade-up">
+                <div class="proj-media">
+                    <button type="button" class="yt-facade" id="feemplayer" data-yt="EFKKBurgQI4" data-title="FEEM Player demo"
+                        onclick="videoPlayer('feemplayer','fBtnText')" aria-label="Play FEEM Player demo">
+                        <img src="https://i.ytimg.com/vi/EFKKBurgQI4/hqdefault.jpg" alt="" loading="lazy" decoding="async">
+                        <span class="yt-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                    </button>
+                    <span class="proj-status video"><span class="proj-dot"></span>Demo video</span>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-index">PRJ-03</span>
+                    <h3>FEEM Player</h3>
+                    <p>A music player that reads your facial expression and plays songs that match your mood.</p>
+                    <ul class="service-stack" aria-label="Technologies used"><li>Angular</li><li>TypeScript</li><li>Machine Learning</li><li>Node.js</li><li>MySQL</li></ul>
+                    <div class="proj-actions"><button type="button" class="proj-link primary" onclick="videoPlayer('feemplayer','fBtnText')"><i class="fas fa-play-circle" aria-hidden="true"></i> <span id="fBtnText">Play</span> video</button></div>
+                </div>
+            </article>
+            <article class="proj-card" data-category="web ai" data-aos="fade-up">
+                <div class="proj-media">
+                    <button type="button" class="yt-facade" id="criminalPlayer" data-yt="D2GJjtbg2GU" data-title="Criminal Detector demo"
+                        onclick="videoPlayer('criminalPlayer','cBtnText')" aria-label="Play Criminal Detector demo">
+                        <img src="https://i.ytimg.com/vi/D2GJjtbg2GU/hqdefault.jpg" alt="" loading="lazy" decoding="async">
+                        <span class="yt-play" aria-hidden="true"><i class="fas fa-play"></i></span>
+                    </button>
+                    <span class="proj-status video"><span class="proj-dot"></span>Demo video</span>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-index">PRJ-04</span>
+                    <h3>Criminal Detector</h3>
+                    <p>A web app for verified police officers to register, update and delete criminal records, and to identify suspects by uploading a photo. New officers can sign up but log in only after admin approval.</p>
+                    <ul class="service-stack" aria-label="Technologies used"><li>Django</li><li>Python</li><li>AI / ML</li><li>Face recognition</li><li>PostgreSQL</li></ul>
+                    <div class="proj-actions"><button type="button" class="proj-link primary" onclick="videoPlayer('criminalPlayer','cBtnText')"><i class="fas fa-play-circle" aria-hidden="true"></i> <span id="cBtnText">Play</span> video</button></div>
+                </div>
+            </article>
+            <article class="proj-card" data-category="mobile" data-aos="fade-up">
+                <div class="proj-media">
+                    <img src="./assets/images/covid.jpg" alt="CoviGo COVID-19 tracker app" loading="lazy" decoding="async">
+                    <span class="proj-status proto"><span class="proj-dot"></span>Prototype</span>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-index">PRJ-05</span>
+                    <h3>CoviGo</h3>
+                    <p>A mobile app showing total active, recovered and death cases by country, with vaccine information planned next.</p>
+                    <ul class="service-stack" aria-label="Technologies used"><li>React Native</li><li>JavaScript (ES6+)</li></ul>
+                </div>
+            </article>
+            <article class="proj-card" data-category="web" data-aos="fade-up">
+                <div class="proj-media">
+                    <img src="https://images.unsplash.com/photo-1495465798138-718f86d1a4bc?q=80&w=870&auto=format&fit=crop" alt="StuPro student services app" loading="lazy" decoding="async">
+                    <span class="proj-status proto"><span class="proj-dot"></span>Prototype</span>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-index">PRJ-06</span>
+                    <h3>StuPro</h3>
+                    <p>Helps students settle into a new city by finding the best hostels, laundries and paying-guest options nearby.</p>
+                    <ul class="service-stack" aria-label="Technologies used"><li>Angular</li><li>TypeScript</li><li>Machine Learning</li></ul>
+                </div>
+            </article>
+            <article class="proj-card" data-category="web" data-aos="fade-up">
+                <div class="proj-media">
+                    <img src="https://images.unsplash.com/photo-1658297063569-162817482fb6?q=80&w=774&auto=format&fit=crop" alt="Shopzee e-commerce website" loading="lazy" decoding="async">
+                    <span class="proj-status proto"><span class="proj-dot"></span>Prototype</span>
+                </div>
+                <div class="proj-body">
+                    <span class="proj-index">PRJ-07</span>
+                    <h3>Shopzee</h3>
+                    <p>An e-commerce website where anyone can buy or sell products.</p>
+                    <ul class="service-stack" aria-label="Technologies used"><li>Angular</li><li>JavaScript</li><li>Bootstrap</li></ul>
+                </div>
+            </article>
         </div>
-        <p class="w3-wide w3-text-white my-2 w3-large" title="React Native, Android, Flutter">APP Development <span
-                class="w3-tiny w3-hide-small"> &nbsp;(Hover To See More)</span></p>
-        <div class="w3-white">
-            <div class="" style="height:28px;width:60%; background-color: var(--pcolor);"
-                title="React Native, Android, Flutter"></div>
-        </div><br>
+    </section>
 
+    <div class="container" id="moreSkills">
+        <div class="stack-head" data-aos="fade-up">
+            <span class="gh-kicker">Toolbox</span>
+            <h2 class="stack-title">Skills &amp; Tech Stack</h2>
+            <p class="stack-sub">The tools I use to ship production software, grouped by where they fit.</p>
+            <ul class="stack-legend" aria-label="Legend">
+                <li><span class="stack-dot core"></span>Daily driver</li>
+                <li><span class="stack-dot"></span>Hands-on experience</li>
+            </ul>
+        </div>
+
+        <div class="stack-grid">
+            <article class="stack-card" data-aos="fade-up">
+                <header>
+                    <span class="service-icon" aria-hidden="true"><i class="fas fa-desktop"></i></span>
+                    <h3>Frontend</h3>
+                    <span class="stack-count">10</span>
+                </header>
+                <ul class="service-stack"><li class="core">React</li><li class="core">Angular</li><li class="core">TypeScript</li><li class="core">JavaScript</li><li class="core">HTML5</li><li>CSS3 / SCSS</li><li>Redux</li><li>Material UI</li><li>Tailwind CSS</li><li>Bootstrap</li></ul>
+            </article>
+            <article class="stack-card" data-aos="fade-up">
+                <header>
+                    <span class="service-icon" aria-hidden="true"><i class="fas fa-server"></i></span>
+                    <h3>Backend</h3>
+                    <span class="stack-count">11</span>
+                </header>
+                <ul class="service-stack"><li class="core">Java</li><li class="core">Spring Boot</li><li class="core">Microservices</li><li class="core">REST APIs</li><li class="core">Node.js</li><li>Express.js</li><li>Hibernate / JPA</li><li>FastAPI</li><li>GraphQL</li><li>Django</li><li>Flask</li></ul>
+            </article>
+            <article class="stack-card" data-aos="fade-up">
+                <header>
+                    <span class="service-icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></span>
+                    <h3>Mobile</h3>
+                    <span class="stack-count">6</span>
+                </header>
+                <ul class="service-stack"><li class="core">Flutter</li><li>Dart</li><li class="core">React Native</li><li>Android</li><li>Redux</li><li>AsyncStorage</li></ul>
+            </article>
+            <article class="stack-card" data-aos="fade-up">
+                <header>
+                    <span class="service-icon" aria-hidden="true"><i class="fas fa-cloud"></i></span>
+                    <h3>Cloud &amp; DevOps</h3>
+                    <span class="stack-count">8</span>
+                </header>
+                <ul class="service-stack"><li class="core">Docker</li><li class="core">AWS (EC2, S3, RDS)</li><li class="core">Jenkins</li><li class="core">CI/CD</li><li class="core">Git &amp; GitHub</li><li>Kubernetes</li><li>CloudWatch</li><li>Maven / Gradle</li></ul>
+            </article>
+            <article class="stack-card" data-aos="fade-up">
+                <header>
+                    <span class="service-icon" aria-hidden="true"><i class="fas fa-database"></i></span>
+                    <h3>Data &amp; Messaging</h3>
+                    <span class="stack-count">5</span>
+                </header>
+                <ul class="service-stack"><li class="core">PostgreSQL</li><li class="core">MySQL</li><li>Apache Kafka</li><li>Redis</li><li>Elastic Stack (ELK)</li></ul>
+            </article>
+            <article class="stack-card" data-aos="fade-up">
+                <header>
+                    <span class="service-icon" aria-hidden="true"><i class="fas fa-brain"></i></span>
+                    <h3>AI, Quality &amp; Process</h3>
+                    <span class="stack-count">8</span>
+                </header>
+                <ul class="service-stack"><li class="core">Agentic AI</li><li>Python</li><li>HubSpot</li><li>Machine Learning</li><li>JUnit</li><li>Mockito</li><li>Agile / Scrum</li><li>JIRA &amp; Confluence</li></ul>
+            </article>
+        </div>
 
         <section class="gh-activity is-loading" data-github-user="Acronikhil" aria-labelledby="gh-title">
             <header class="gh-header">
@@ -1218,8 +1081,9 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
         <script src="./assets/js/YoutubeController.js" defer></script>
-        <script src="./assets/js/VideoManager.js" defer></script>
-        <script src="./assets/js/script.js?v=20261025-1" defer></script>
+        <script src="./assets/js/VideoManager.js?v=20261025-1" defer></script>
+        <script src="./assets/js/script.js?v=20261025-4" defer></script>
+        <script src="./assets/js/portfolio.js?v=20261025-2" defer></script>
         <script src="./assets/js/github-stats.js?v=20261025-3" defer></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
@@ -1229,6 +1093,14 @@
 
             // Footer: current year, live Pune time, and copy-email button
             document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+            // Years since a "YYYY-MM" start date, e.g. the terminal's "uptime" line
+            document.querySelectorAll("[data-since]").forEach(function (el) {
+                var s = el.dataset.since.split("-").map(Number), now = new Date();
+                var months = (now.getFullYear() - s[0]) * 12 + (now.getMonth() + 1 - s[1]);
+                var y = Math.floor(months / 12), m = months % 12;
+                el.textContent = y + (y === 1 ? " yr" : " yrs") + (m ? " " + m + (m === 1 ? " mo" : " mos") : "");
+            });
 
             var localTime = document.querySelector("[data-local-time]");
             function updateLocalTime() {
@@ -1267,6 +1139,58 @@
 
         <script src="./assets/js/glightbox.min.js"></script>
         <script src="./assets/js/light.js?v=20261025-2"></script>
+
+        <!-- Profile card opened from the navbar photo -->
+        <div class="profile-modal" id="profileModal" role="dialog" aria-modal="true"
+            aria-labelledby="profile-modal-name" hidden>
+            <div class="profile-backdrop" data-profile-close></div>
+            <div class="profile-card">
+                <button type="button" class="profile-close" data-profile-close aria-label="Close profile"><i
+                        class="fas fa-times" aria-hidden="true"></i></button>
+                <div class="profile-orbit" aria-hidden="true">
+                    <span class="orbit orbit-1"><i></i></span>
+                    <span class="orbit orbit-2"><i></i></span>
+                    <span class="orbit orbit-3"><i></i></span>
+                </div>
+                <img class="profile-big" src="./assets/images/My_CP_Image.png" alt="Nikhil Dubey" width="260"
+                    height="260" loading="lazy">
+                <h2 id="profile-modal-name">Nikhil Dubey</h2>
+                <p class="profile-role">Consultant @ Blue Altair · Java Full Stack Developer</p>
+                <p class="profile-meta"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Pune, India
+                    <span class="profile-status"><span class="gh-live-dot"></span>Open to collaborate</span></p>
+                <div class="profile-actions">
+                    <a class="resume-btn resume-btn-primary" href="mailto:20.nikhildubey@gmail.com"><i
+                            class="fas fa-paper-plane" aria-hidden="true"></i> Say hello</a>
+                    <a class="resume-btn resume-btn-ghost" href="./assets/Resume/Nikhil_Dubey_CV.pdf" target="_blank"
+                        rel="noopener"><i class="fa fa-file-alt" aria-hidden="true"></i> Resume</a>
+                </div>
+                <ul class="footer-social profile-social" aria-label="Social profiles">
+                    <li><a href="https://github.com/Acronikhil/" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/nikhil-dubey-207055190/" target="_blank" rel="noopener"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.instagram.com/nikhil.dubeyy/" target="_blank" rel="noopener"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rocket scrollbar (pointer devices only; keyboard and wheel scrolling stay native) -->
+        <div class="rocket-scroll" aria-hidden="true">
+            <div class="rocket-track"><span class="rocket-trail"></span></div>
+            <div class="rocket-thumb">
+                <div class="rocket-ship">
+                    <svg viewBox="0 0 24 40" width="20" height="34">
+                        <path d="M12 1c5 5.5 6.5 12 6.5 20v7h-13v-7C5.5 13 7 6.5 12 1z" fill="#ece4ff" />
+                        <path d="M12 1c2.6 2.9 4.2 6 5.2 9.5H6.8C7.8 7 9.4 3.9 12 1z" fill="#a15afd" />
+                        <circle cx="12" cy="16" r="3" fill="#00d8ff" stroke="#4d0fb5" stroke-width="1.5" />
+                        <path d="M5.5 21L1 28v4l4.5-3.5zM18.5 21l4.5 7v4l-4.5-3.5z" fill="#7510f7" />
+                        <rect x="8" y="28" width="8" height="3" rx="1" fill="#4d0fb5" />
+                    </svg>
+                    <span class="rocket-flame"></span>
+                </div>
+            </div>
+        </div>
 
         <!-- Scroll to Top Button -->
         <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">

@@ -59,6 +59,11 @@
         window.addEventListener("load", measure);
     }
 
+    // Images and icons can't be dragged out of the page (CSS covers Chromium/Safari; this covers Firefox)
+    document.addEventListener("dragstart", function (e) {
+        if (e.target.closest && e.target.closest("img, svg, canvas")) e.preventDefault();
+    });
+
     // ---- Cosmic hero: typed roles, starfield and gentle mouse parallax ----
     var hero = document.querySelector(".hero-section");
     var typed = document.querySelector(".cosmo-typed");

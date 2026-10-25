@@ -2424,6 +2424,64 @@ h6 {
 	}
 }
 
+/* Interface chrome is not selectable; reading content (paragraphs, headings, details) stays selectable */
+.portfolio-nav,
+.island,
+button,
+.btn,
+.resume-btn,
+.proj-link,
+.nav-cta,
+.cert-chip,
+.cert-tile,
+.cert-tag,
+.proj-status,
+.proj-index,
+.proj-media,
+.service-icon,
+.service-stack,
+.stack-count,
+.stack-legend,
+.exp-logo,
+.exp-skills,
+.exp-type,
+.gh-kicker,
+.gh-stat-icon,
+.gh-value,
+.gh-legend,
+.gh-profile-btn,
+.gh-lang-legend,
+.footer-status,
+.footer-social,
+.footer-wordmark,
+.terminal-bar,
+.terminal-colors,
+.cosmo-badge,
+.cosmo-proof,
+.cosmo-scroll,
+.cosmo-caret,
+.jarvis,
+.jarvis-readout,
+.rocket-scroll,
+.scroll-to-top-btn,
+.profile-orbit,
+.profile-close {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+img,
+svg,
+canvas {
+	-webkit-user-drag: none;
+	user-select: none;
+}
+
+::selection {
+	color: #fff;
+	background: rgba(117, 16, 247, 0.65);
+}
+
 /* Cosmic hero */
 .hero-section {
 	--px: 0;
